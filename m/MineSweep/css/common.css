@@ -1,0 +1,11 @@
+﻿/********************全局********************/
+body,form,dl,dd,ul{ margin:0; padding:0; list-style:none; }
+body,td,div,span,p,a,input,select{ font-size:12px; color:#666666; font-family:microsoft yahei,arial ;}
+img{ border:0; }
+html *{outline: 0;}
+body{background-color: #bbbbbb;text-align: center;}
+header{background-color: #999;height: 60px; line-height: 60px;font-size: 2em; color: #fff;}
+
+.container{ width: 16rem; margin: 0 auto; height: 300px; font-size: 0px; background-color: #eee;}
+	.wrap li{display: inline-block; width: 1.77rem; height: 1.77rem; float: left;}
+	.mineBox{border-top: 1px solid #fff; border-left: 1px solid #fff;background-color: #ccc; border-right: 1px solid #888; border-bottom: 1px solid #888;}
