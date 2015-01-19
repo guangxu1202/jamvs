@@ -4,49 +4,21 @@
 <head>
 
 <title>1</title>
-<link href="css/common.css" rel="stylesheet" type="text/css" />
-<script src="js/common.js" type="text/javascript"></script>
-
-<meta content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0" name="viewport" />
+<meta charset="utf-8" />
+<!--允许全屏-->
 <meta content="yes" name="apple-mobile-web-app-capable" />
-<meta content="black" name="apple-mobile-web-app-status-bar-style" />
-<meta content="telephone=no" name="format-detection" />
+<meta content="yes" name="apple-touch-fullscreen" />    
+<meta content="telephone=no,email=no" name="format-detection" />
+<meta content="fullscreen=yes,preventMove=no" name="ML-Config" />
+<link href="css/common.css" rel="stylesheet" type="text/css" />
+<script src="js/jquery-1.11.1.min.js" type="text/javascript"></script>
+<script src="js/common.js" type="text/javascript"></script>
+<meta content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0" name="viewport" />
+
 <script type="text/javascript">
-!function(a){
-	function b(){
-		var b=g.getBoundingClientRect().width;
-		b/c>540&&(b=540*c),a.rem=b/16,g.style.fontSize=a.rem+"px"
-	}
-	var c,d,e,f=a.document,g=f.documentElement,h=f.querySelector('meta[name="viewport"]'),i=f.querySelector('meta[name="flexible"]');
-	if(h){
-		console.warn("将根据已有的meta标签来设置缩放比例");
-		var j=h.getAttribute("content").match(/initial\-scale=(["']?)([\d\.]+)\1?/);
-		j&&(d=parseFloat(j[2]),c=parseInt(1/d))
-	}else if(i){
-		var j=i.getAttribute("content").match(/initial\-dpr=(["']?)([\d\.]+)\1?/);
-		j&&(c=parseFloat(j[2]),d=parseFloat((1/c).toFixed(2)))
-	}
-	if(!c&&!d){
-		var k=(a.navigator.appVersion.match(/android/gi),a.navigator.appVersion.match(/iphone/gi)),
-			c=a.devicePixelRatio;c=k?c>=3?3:c>=2?2:1:1,d=1/c
-	}
-	if(g.setAttribute("data-dpr",c),!h)
-		if(h=f.createElement("meta"),h.setAttribute("name","viewport"),
-			h.setAttribute("content","initial-scale="+d+", maximum-scale="+d+", minimum-scale="+d+", user-scalable=no"),
-			g.firstElementChild)g.firstElementChild.appendChild(h);
-			else{
-				var l=f.createElement("div");
-				l.appendChild(h),f.write(l.innerHTML)
-			}
-			a.dpr=c,a.addEventListener("resize",function(){
-				clearTimeout(e),e=setTimeout(b,300)
-			},!1),
-			a.addEventListener("pageshow",function(a){
-				a.persisted&&(clearTimeout(e),e=setTimeout(b,300))
-			},!1),"complete"===f.readyState?f.body.style.fontSize=12*c+"px":f.addEventListener("DOMContentLoaded",function(){
-				f.body.style.fontSize=12*c+"px"
-			},!1),
-		b()}(window);
+// flexible.js
+!function(a){function b(){var b=g.getBoundingClientRect().width;b/c>540&&(b=540*c),a.rem=b/9,g.style.fontSize=a.rem+"px"}var c,d,e,f=a.document,g=f.documentElement,h=f.querySelector('meta[name="viewport"]'),i=f.querySelector('meta[name="flexible"]');if(h){console.warn("将根据已有的meta标签来设置缩放比例");var j=h.getAttribute("content").match(/initial\-scale=(["']?)([\d\.]+)\1?/);j&&(d=parseFloat(j[2]),c=parseInt(1/d))}else if(i){var j=i.getAttribute("content").match(/initial\-dpr=(["']?)([\d\.]+)\1?/);j&&(c=parseFloat(j[2]),d=parseFloat((1/c).toFixed(2)))}if(!c&&!d){var k=(a.navigator.appVersion.match(/android/gi),a.navigator.appVersion.match(/iphone/gi)),c=a.devicePixelRatio;c=k?c>=3?3:c>=2?2:1:1,d=1/c}if(g.setAttribute("data-dpr",c),!h)if(h=f.createElement("meta"),h.setAttribute("name","viewport"),h.setAttribute("content","initial-scale="+d+", maximum-scale="+d+", minimum-scale="+d+", user-scalable=no"),g.firstElementChild)g.firstElementChild.appendChild(h);else{var l=f.createElement("div");l.appendChild(h),f.write(l.innerHTML)}a.dpr=c,a.addEventListener("resize",function(){clearTimeout(e),e=setTimeout(b,300)},!1),a.addEventListener("pageshow",function(a){a.persisted&&(clearTimeout(e),e=setTimeout(b,300))},!1),"complete"===f.readyState?f.body.style.fontSize=12*c+"px":f.addEventListener("DOMContentLoaded",function(){f.body.style.fontSize=12*c+"px"},!1),b()}(window);
+
 </script>
 </head>
 <body>
@@ -54,48 +26,131 @@
 <header>进度：0%</header>
 <div class="container">
 	<div class="wrap">
-		<ul>
-			<li>
-				<div class="mineBox"></div>
-			</li>
-			<li>
-				<div class="mineBox"></div>
-			</li>
-			<li>
-				<div class="mineBox"></div>
-			</li>
-			<li>
-				<div class="mineBox"></div>
-			</li>
-			<li>
-				<div class="mineBox"></div>
-			</li>
-			<li>
-				<div class="mineBox"></div>
-			</li>
-			<li>
-				<div class="mineBox"></div>
-			</li>
-			<li>
-				<div class="mineBox"></div>
-			</li>
-			<li>
-				<div class="mineBox"></div>
-			</li>
-			<li>
-				<div class="mineBox"></div>
-			</li>
-			<li>
-				<div class="mineBox"></div>
-			</li>
-			<li>
-				<div class="mineBox"></div>
-			</li>
-
-		</ul>
+		<ul id="box"></ul>
 	</div>
 </div>
+<footer>
+	<button>排雷</button>
+	<button>排雷</button>
+</footer>
+<script type="text/javascript">
+var minedArray,//初始化数组
+    flag = 0,  //游戏进程，0为结束，1为开始，2初始化成功
+    lastNum ,  //剩余雷数
+    countNum   //剩余格子
+
+function init(x,y,mine){
+	countNum = x * y;
+	lastNum = mine;
+	flag = 2;
+	// 初始化雷区
+	minedArray = new Array(y+2);
+	for(var i = 0; i < minedArray.length;i++){
+		minedArray[i] = new Array(x+2);
+	}
+
+	// 清扫雷区
+	for(var i = 1; i <= y; i++){
+		for(var j = 1; j <= x; j++){
+			minedArray[i][j] = 0;
+		}
+	}
+	// 布雷
+	while(mine > 0){
+		var col = Math.ceil(Math.random()*y);
+		var row = Math.ceil(Math.random()*x);
+		if (minedArray[col][row] !=-1) {
+			minedArray[col][row] = -1;
+			mine--;
+		};
+	}
+	// 设置雷区标识数
+	for(var i = 1; i < y; i++){
+		for(var j = 1; j < x; j++){
+			
+			if (minedArray[i][j] !=-1) {
+				var n = 0;
+				if(minedArray[i-1][j-1] ==-1){n++;}
+				if(minedArray[i-1][j] ==-1){n++;}
+				if(minedArray[i-1][j+1] ==-1){n++;}
+				if(minedArray[i][j-1] ==-1){n++;}
+				if(minedArray[i][j+1] ==-1){n++;}
+				if(minedArray[i+1][j-1] ==-1){n++;}
+				if(minedArray[i+1][j] ==-1){n++;}
+				if(minedArray[i+1][j+1] ==-1){n++;}
+				minedArray[i][j] = n;
+			};
+		}
+	}
+
+	// 绘制地图
+	for(var i = 1; i <= y; i++){
+		for(var j = 1; j <= x; j++){
+			switch(minedArray[i][j]){
+				case -1:
+					color = "hasmine";
+					break;
+				case 0:
+					color = "empty";
+					break;
+				case 1:
+					color = "blue";
+					break;
+				case 2:
+					color = "green";
+					break;
+				case 3:
+					color = "red";
+					break;
+				case 4:
+					color = "bluelight";
+					break;
+				case 5:
+					color = "brown";
+					break;
+				case 6:
+					color = "purple";
+					break;
+				case 7:
+					color = "orange";
+					break;
+				case 8:
+					color = "dark";
+					break;
+				default:
+					color = "";
+			}
+			$("#box").append("<li><div class='mineBox'><span class='"+color+" hide'>"+minedArray[i][j]+"</span></div></li>")
+			
+		}
+	}
+
+	// 设置雷区位置
+	var wineH = ($("#box li").height()+2)*y;
+	var docH = $(document).height() - $("header").height()- $("footer").height()
+	if (wineH < docH) {
+		$(".wrap").css("padding-top",(docH - wineH)/2 +"px");
+	}else{
+		alert("屏幕区域不足，请滑动显示")
+	};
+}
 
 
+// mined
+init(9,9,20)
+$(function(){
+	$("#box li").mouseup(function(index){
+		var h_span = $(this).find("span");
+		var n = parseInt(h_span.html());
+		if (h_span.hasClass("hide")) {
+			// 这里进行各种状态的判断
+			h_span.removeClass("hide");
+		}else{
+			// alert("已排除")
+			return false;
+		};
+	})
+})
+</script>
 </body>
 </html>
