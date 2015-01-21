@@ -30,14 +30,15 @@
 	</div>
 </div>
 <footer>
-	<button>排雷</button>
-	<button>排雷</button>
+	<button class="btn btn_mine" value="10" onclick="setBtnVal(10)">排雷</button>
+	<button class="btn btn_flag" value="11" onclick="setBtnVal(11)">插旗</button>
 </footer>
 <script type="text/javascript">
 var minedArray,//初始化数组
     flag = 0,  //游戏进程，0为结束，1为开始，2初始化成功
     lastNum ,  //剩余雷数
-    countNum   //剩余格子
+    countNum,  //剩余格子
+    btnValue   //按钮属性
 
 function init(x,y,mine){
 	countNum = x * y;
@@ -125,6 +126,9 @@ function init(x,y,mine){
 		}
 	}
 
+	// 默认按钮
+	setBtnVal(10);
+
 	// 设置雷区位置
 	var wineH = ($("#box li").height()+2)*y;
 	var docH = $(document).height() - $("header").height()- $("footer").height()
@@ -133,18 +137,55 @@ function init(x,y,mine){
 	}else{
 		alert("屏幕区域不足，请滑动显示")
 	};
+
 }
 
 
+function setBtnVal(n){
+	btnValue = n;
+	$(".btn").removeClass("btnFocus");
+	n == 10 ? $(".btn_mine").addClass("btnFocus") : $(".btn_flag").addClass("btnFocus");
+}
+
 // mined
-init(9,9,20)
+init(9,9,10)
+
+
 $(function(){
 	$("#box li").mouseup(function(index){
 		var h_span = $(this).find("span");
 		var n = parseInt(h_span.html());
 		if (h_span.hasClass("hide")) {
 			// 这里进行各种状态的判断
-			h_span.removeClass("hide");
+			// alert($(this).index())
+			switch (btnValue){
+				case 10: 
+					// 排雷，需谨慎
+					if (n>0) {
+						// 点击到数字
+						h_span.removeClass("hide");
+						$(this).addClass("focus")
+					}else if(n==0){
+						// 点击到零
+						
+					}else if(n<0){
+						// 点击到炸弹
+
+					};
+					break;
+				case 11:
+					// 插旗
+					alert($(this).find(".mineBox"))
+					break;
+				default:
+					// 配置出错
+					break;
+			}
+			
+			
+			
+			
+			
 		}else{
 			// alert("已排除")
 			return false;
