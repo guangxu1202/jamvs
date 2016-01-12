@@ -1,0 +1,830 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<title>三匚汇--首页</title>
+<link rel="stylesheet" type="text/css" href="../style/common.css">
+
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/html5_ie.js"></script>
+<script src="../js/common.js" type="text/javascript"></script>
+<script type="text/javascript" src="../js/skIndex.js"></script>
+</head>
+<body>
+
+
+
+
+<!-- 头部公共部分 -->
+<header class="header">
+    <!-- 头部广告图 -->
+    <div class="h_b_warp">
+        <div class="mtsBanner" id="mtsBanner">
+            <ul class="bannerWrap">
+                <!-- 图片尺寸标准：2000*420 -->
+                <li style="background-image: url(../images/h_b1.jpg);">
+                    <a href="#" target="_blank"></a>
+                </li>
+                <li style="background-image: url(../images/h_b2.jpg);">
+                    <a href="#" target="_blank"></a>
+                </li>
+            </ul> 
+        </div>
+    </div>
+    <!-- 默认头部导航 -->
+    <div class="nav">
+        <div class="wrap">
+            <div class="navigator fl">
+                <ul>
+                    <li class="nav_li"><a href="#" class="nav_a focus">首 页</a></li>
+                    <li class="nav_li">
+                        <a href="#" class="nav_a">所有商品</a>
+                        <div class="nav_wrap">
+                            <a href="#">衬衫</a>
+                            <a href="#">毛衫</a>
+                            <a href="#">连衣裙</a>
+                            <a href="#">外套</a>
+                            <a href="#">大衣</a>
+                            <a href="#">风衣</a>
+                            <a href="#">皮衣</a>
+                            <a href="#">皮草</a>
+                            <a href="#">半裙</a>
+                            <a href="#">裤子</a>
+                            <a href="#">棉衣</a>
+                            <a href="#">羽绒</a>
+                            <a href="#">T恤</a>
+                            <a href="#">卫衣</a>
+                        </div>
+                        <div class="nav_wfilter filter70"></div>
+                    </li>
+                    <li class="nav_li"><a href="#" class="nav_a">女神 · 经</a></li>
+                    <li class="nav_li"><a href="#" class="nav_a">搭 配</a></li>
+                    <li class="nav_li">
+                        <span class="pr fl nav_pr">
+                            <span class="nav_logo">
+                                <em></em>
+                            </span>
+                        </span>
+                    </li>
+                    <li class="nav_li"><a href="#" class="nav_a">抢先穿</a></li>
+                    <li class="nav_li"><a href="#" class="nav_a">我们的品牌来自<i class="q ico_n0"></i></a></li>
+                </ul>
+            </div>
+            <div class="fr">
+                <div class="navsub">
+                    <i class="q ico_n1"></i>
+                </div>
+                <div class="navsub nav_per">
+                    <!-- 登录前 -->
+                    <!-- <a href="#"><i class="q ico_n2"></i></a> -->
+                    <!-- 登录后 -->
+                    <i class="q ico_n4"></i>
+                    <div class="p_msg nav_per_h">
+                        <div class="p_msgbox">
+                            <div class="p_msg_info">
+                                <div class="p_msg_n group">
+                                    <div class="circle fl"><img src="../images/header01.jpg"></div>
+                                    风萧萧兮易水寒
+                                </div>
+                                <div class="p_msg_lv group">
+                                    <span class="fl">级别：普通会员</span>
+                                    <span class="fr">LV.01</span>
+                                </div>
+                                <div class="p_msg_b">
+                                    <a href="#">个人信息</a>
+                                    <a href="#">退出登录</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p_msgarr filter70"></div>
+                        <div class="p_msgbg filter70"></div>
+                    </div>
+                </div>
+                <div class="navsub">
+                    <i class="q ico_n3 pr">
+                        <em class="cat_n">9+</em>
+                    </i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="nav_shadow filter70"></div>
+</header>
+
+
+<!-- /头部公共部分 -->
+
+<!-- 首页左侧快捷锚点 -->
+<div class="index_anchor hide">
+    <dl>
+        <dd><a href="#">TOP</a></dd>
+        <dd><a href="###">特卖</a></dd>
+        <dd><a href="###">女神 · 经</a></dd>
+        <dd><a href="###">求搭配</a></dd>
+        <dd><a href="###">商品</a></dd>
+    </dl>
+</div>
+
+<script type="text/javascript">
+// 头部切换状态
+$(function(){
+    $(window).scroll(function(){
+        var s_top = $(document).scrollTop();
+
+        if ($(document).scrollTop() >420) {
+            $(".nav").addClass("nav_fixed");
+            $(".nav_shadow").addClass("nav_sd_fixed filter100");
+            $(".nav_pr").show();
+            $(".index_anchor").show();
+        }else{
+            $(".nav").removeClass("nav_fixed");
+            $(".nav_shadow").removeClass("nav_sd_fixed filter100");
+            $(".nav_pr").hide();
+            $(".index_anchor").hide();
+        };
+    }) 
+})
+
+</script>
+
+<!-- 主内容区 -->
+
+<!-- banner -->
+<div class="wrap banner pr mb30">
+    <div class="ban_list">
+        <span class="ban_l1 filter50"></span><span class="ban_l2 filter50"></span><span class="ban_l3 filter50"></span>
+        <a href="#"><img src="../images/banner_s1.jpg" class="filter0"></a>
+        <a href="#"><img src="../images/banner_s1.jpg" class="filter0"></a>
+        <a href="#"><img src="../images/banner_s1.jpg" class="filter0"></a>
+        <a href="#"><img src="../images/banner_s1.jpg" class="filter0"></a>
+    </div>
+    <!-- banner大图背景 -->
+    <div class="ban_bg"><img src="../images/banner.jpg"></div>
+</div>
+
+
+<!-- search -->
+<div class="search mb30">
+    <div class="sea_t pr">
+        <div class="sea_t_i"></div>
+        <div class="fr sea_tab">
+            <span class="focus">商品</span>
+            <span>女神 · 经</span>
+        </div>
+        <div class="fr sea_title">开启您的时尚品质之旅</div>
+    </div>
+    <div class="sea_b">
+        <div class="sea_b_i">
+            <div class="sea_inbox pr">
+                <form>
+                    <input type="text">
+                    <button type="submit"></button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 品质 -->
+<div class="wrap group mb30">
+    <div class="quality">
+        <div class="quality_box">
+            <div class="quality_circle">
+                <i class="q qua_01"></i>
+            </div>
+            <h6>只做品质</h6>
+            <p>
+                厂家直接供货，<br>
+                严格把控，<br>
+                每一件商品都是精品中的精品。
+            </p>
+        </div>
+    </div>
+    <div class="quality">
+        <div class="quality_box">
+            <div class="quality_circle">
+                <i class="q qua_02"></i>
+            </div>
+            <h6>商品追溯</h6>
+            <p>
+                每一件商品都是品牌，<br>
+                店面中售卖的商品，<br>
+                可在网站中...
+            </p>
+        </div>
+    </div>
+    <div class="quality">
+        <div class="quality_box">
+            <div class="quality_circle">
+                <i class="q qua_03"></i>
+            </div>
+            <h6>源自高端商场</h6>
+            <p>
+                本站所有商品，<br>
+                均是在线下各大高端商场<br>
+                有实体店面...
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- 特卖-即将开始 -->
+<div class="special_ready mb30">
+    <div class="wrap">
+        <h5 class="spec_title">SPECIAL SELLING</h5>
+        <p class="spec_detail">我也不知道什么时候开售!!!</p>
+        <div class="spec_col2 group">
+            <div class="spec_ibox fl">
+                <!-- 特卖链接 -->
+                <a class="spec_link" href="#">
+                    <span class="spec_link1">即将要开始特价的商品</span>
+                    <span class="spec_link2">coming soon</span>
+                    <i class="q icon_spec"></i>
+                </a>
+                <div class="spec_purbg filter70"></div>
+                <div class="grey_filter filter50"></div>
+                <!-- 特卖图片 -->
+                <img src="../images/special01.jpg">
+            </div>
+            <div class="spec_ibox fr">
+                <!-- 特卖链接 -->
+                <a class="spec_link" href="#">
+                    <span class="spec_link1">即将发布的时尚新商品</span>
+                    <span class="spec_link2">coming soon</span>
+                    <i class="q icon_spec"></i>
+                </a>
+                <div class="spec_purbg filter70"></div>
+                <div class="grey_filter filter50"></div>
+                <!-- 特卖图片 -->
+                <img src="../images/special02.jpg">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 标题 -->
+<div class="wrap">
+    <div class="line_title mb30 pr">
+        <div class="line_mid">
+            <div class="lt_en">BEST SELLERS</div>
+            <div class="lt_zh">据说穿这些的都变成了女神!!!</div>
+        </div>
+        <div class="lt_line"></div>
+    </div>
+</div>
+
+<!-- 特卖商品 -->
+<div class="wrap">
+    <div class="special_list">
+        <!-- 较高的商品列表 -->
+        <div class="spec_tbox group mb30">
+            <div class="spec_t">
+                <a href="#"><img src="../images/spec_n1.jpg"></a>
+            </div>
+            <div class="spec_t goods">
+                <div class="spec_price">¥1999</div>
+                <div class="spec_links">
+                    <a href="#" class="spec_links_t">2015春装新款<br>中长款甜美抹胸式连衣裙</a>
+                    <div class="spec_brand">
+                        <img src="../images/temp_logo.gif" width="80" height="48">
+                        <span>品牌商名称</span>
+                    </div>
+                </div>
+                <div class="spec_linksbg filter50"></div>
+                <div class="spec_filter filter50 hide"></div>
+                <img src="../images/spec_t1.jpg">
+            </div>
+            <div class="spec_t goods">
+                <div class="spec_price">¥1999</div>
+                <div class="spec_links">
+                    <a href="#" class="spec_links_t">2015春装新款<br>中长款甜美抹胸式连衣裙</a>
+                    <div class="spec_brand">
+                        <img src="../images/temp_logo.gif" width="80" height="48">
+                        <span>品牌商名称</span>
+                    </div>
+                </div>
+                <div class="spec_linksbg filter50"></div>
+                <div class="spec_filter filter50 hide"></div>
+                <img src="../images/spec_t2.jpg">
+            </div>
+        </div>
+        <!-- 高度较小的商品列表 -->
+        <div class="spec_bbox group mb30">
+            <div class="spec_t goods">
+                <div class="spec_price">¥1999</div>
+                <div class="spec_links">
+                    <a href="#" class="spec_links_t">2015春装新款<br>中长款甜美抹胸式连衣裙</a>
+                    <div class="spec_brand">
+                        <img src="../images/temp_logo.gif" width="80" height="48">
+                        <span>品牌商名称</span>
+                    </div>
+                </div>
+                <div class="spec_linksbg filter50"></div>
+                <div class="spec_filter filter50 hide"></div>
+                <img src="../images/spec_b1.jpg">
+            </div>
+            <div class="spec_t goods">
+                <div class="spec_price">¥1999</div>
+                <div class="spec_links">
+                    <a href="#" class="spec_links_t">2015春装新款<br>中长款甜美抹胸式连衣裙</a>
+                    <div class="spec_brand">
+                        <img src="../images/temp_logo.gif" width="80" height="48">
+                        <span>品牌商名称</span>
+                    </div>
+                </div>
+                <div class="spec_linksbg filter50"></div>
+                <div class="spec_filter filter50 hide"></div>
+                <img src="../images/spec_b2.jpg">
+            </div>
+            <div class="spec_t goods">
+                <div class="spec_price">¥1999</div>
+                <div class="spec_links">
+                    <a href="#" class="spec_links_t">2015春装新款<br>中长款甜美抹胸式连衣裙</a>
+                    <div class="spec_brand">
+                        <img src="../images/temp_logo.gif" width="80" height="48">
+                        <span>品牌商名称</span>
+                    </div>
+                </div>
+                <div class="spec_linksbg filter50"></div>
+                <div class="spec_filter filter50 hide"></div>
+                <img src="../images/spec_b1.jpg">
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+<!-- 标题 -->
+<div class="wrap ">
+    <div class="line_title mb30 pr">
+        <div class="line_mid">
+            <div class="lt_en">BEST SELLERS</div>
+            <div class="lt_zh">据说穿这些的都变成了女神!!!</div>
+        </div>
+        <div class="lt_line"></div>
+    </div>
+</div>
+
+<!-- 女神经 -->
+<!-- 女神经01 -->
+<div class="wrap">
+    <div class="goddess group mb30">
+        <div class="god_img group">
+            <div class="god_img_wt fl"><img src="../images/home_wt1.gif"></div>
+            <div class="god_img_wi fl"><img src="../images/home_wi1.jpg"></div>
+        </div>
+        <!-- 下面有颜色class区分 -->
+        <div class="god_newbox god_pink">
+            <!-- 列表 -->
+            <div class="god_nlist fl">
+                <div class="god_nlist_body">
+                    <dl>
+                        <dt><a href="#">2015裤子最流行 九分阔腿裤搭配显出美腿</a></dt>
+                        <dd>今年阔腿裤大热，如果你还没有一款优雅的阔腿裤那你就OUT啦！无论是搭配优雅的衬衫，还是搭配简约的T恤衫...</dd>
+                    </dl>
+                    <dl>
+                        <dt><a href="#">条纹T恤清新显瘦 搭配达人教你穿出气质时尚</a></dt>
+                        <dd>这款条纹T恤款式简单，加入蕾丝装饰，增添了精致浪漫的味道，多了几分淑女气质...</dd>
+                    </dl>
+                    <dl>
+                        <dt><a href="#">第68届戛纳红毯 张馨予“红配绿”范冰冰变陪衬</a></dt>
+                        <dd>张馨予第一次走上戛纳电影节的红毯，可谓是费尽心思，这款“东北大棉袄”的造型，用力过猛 ...</dd>
+                    </dl>
+                </div>
+            </div>
+            <!-- 详情 -->
+            <div class="god_ndetail pr fr">
+                <dl>
+                    <dt><a href="#">白T恤搭配技巧 8种简约穿法很适合夏季</a></dt>
+                    <dd>
+                        <p class="god_p">
+                            <i class="ico_god ico_god1">“</i>
+                            这款条纹T恤款式简单，加入蕾丝装饰，增添了精致浪漫的味道，多了几分淑女气质 今年阔腿裤大热，如果你还没有一款优雅的阔腿裤那你就OUT啦！无论是搭配优雅的衬衫
+                            <!-- 这里请截取字符串，不要超过容器高度 -->
+                            <i class="ico_god ico_god2">”</i>
+                        </p>
+                    </dd>
+                </dl>
+                <!-- 按钮切换上面的dl -->
+                <div class="god_nd_btn">
+                    <a class="god_nd_prev fl" href="###">&lt;</a>
+                    <a class="god_nd_next fr" href="###">&gt;</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 女神经02 -->
+<div class="wrap">
+    <div class="goddess group mb30">
+        <div class="god_img group">
+            <div class="god_img_wi fl"><img src="../images/home_wi2.jpg"></div>
+            <div class="god_img_wt fl"><img src="../images/home_wt2.gif"></div>
+        </div>
+        <!-- 下面有颜色class区分 -->
+        <div class="god_newbox god_brown">
+            <!-- 列表 -->
+            <div class="god_nlist fr">
+                <div class="god_nlist_body">
+                    <dl>
+                        <dt><a href="#">2015裤子最流行 九分阔腿裤搭配显出美腿</a></dt>
+                        <dd>今年阔腿裤大热，如果你还没有一款优雅的阔腿裤那你就OUT啦！无论是搭配优雅的衬衫，还是搭配简约的T恤衫...</dd>
+                    </dl>
+                    <dl>
+                        <dt><a href="#">条纹T恤清新显瘦 搭配达人教你穿出气质时尚</a></dt>
+                        <dd>这款条纹T恤款式简单，加入蕾丝装饰，增添了精致浪漫的味道，多了几分淑女气质...</dd>
+                    </dl>
+                    <dl>
+                        <dt><a href="#">第68届戛纳红毯 张馨予“红配绿”范冰冰变陪衬</a></dt>
+                        <dd>张馨予第一次走上戛纳电影节的红毯，可谓是费尽心思，这款“东北大棉袄”的造型，用力过猛 ...</dd>
+                    </dl>
+                </div>
+            </div>
+            <!-- 详情 -->
+            <div class="god_ndetail pr fl">
+                <dl>
+                    <dt><a href="#">白T恤搭配技巧 8种简约穿法很适合夏季</a></dt>
+                    <dd>
+                        <p class="god_p">
+                            <i class="ico_god ico_god1">“</i>
+                            这款条纹T恤款式简单，加入蕾丝装饰，增添了精致浪漫的味道，多了几分淑女气质 今年阔腿裤大热，如果你还没有一款优雅的阔腿裤那你就OUT啦！无论是搭配优雅的衬衫
+                            <!-- 这里请截取字符串，不要超过容器高度 -->
+                            <i class="ico_god ico_god2">”</i>
+                        </p>
+                    </dd>
+                </dl>
+                <!-- 按钮切换上面的dl -->
+                <div class="god_nd_btn">
+                    <a class="god_nd_prev fl" href="###">&lt;</a>
+                    <a class="god_nd_next fr" href="###">&gt;</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 女神经03 -->
+<div class="wrap">
+    <div class="goddess group mb30">
+        <div class="god_img group">
+            <div class="god_img_wt fl"><img src="../images/home_wt3.gif"></div>
+            <div class="god_img_wi fl"><img src="../images/home_wi3.jpg"></div>
+        </div>
+        <!-- 下面有颜色class区分 -->
+        <div class="god_newbox god_purple">
+            <!-- 列表 -->
+            <div class="god_nlist fl">
+                <div class="god_nlist_body">
+                    <dl>
+                        <dt><a href="#">2015裤子最流行 九分阔腿裤搭配显出美腿</a></dt>
+                        <dd>今年阔腿裤大热，如果你还没有一款优雅的阔腿裤那你就OUT啦！无论是搭配优雅的衬衫，还是搭配简约的T恤衫...</dd>
+                    </dl>
+                    <dl>
+                        <dt><a href="#">条纹T恤清新显瘦 搭配达人教你穿出气质时尚</a></dt>
+                        <dd>这款条纹T恤款式简单，加入蕾丝装饰，增添了精致浪漫的味道，多了几分淑女气质...</dd>
+                    </dl>
+                    <dl>
+                        <dt><a href="#">第68届戛纳红毯 张馨予“红配绿”范冰冰变陪衬</a></dt>
+                        <dd>张馨予第一次走上戛纳电影节的红毯，可谓是费尽心思，这款“东北大棉袄”的造型，用力过猛 ...</dd>
+                    </dl>
+                </div>
+            </div>
+            <!-- 详情 -->
+            <div class="god_ndetail pr fr">
+                <dl>
+                    <dt><a href="#">白T恤搭配技巧 8种简约穿法很适合夏季</a></dt>
+                    <dd>
+                        <p class="god_p">
+                            <i class="ico_god ico_god1">“</i>
+                            这款条纹T恤款式简单，加入蕾丝装饰，增添了精致浪漫的味道，多了几分淑女气质 今年阔腿裤大热，如果你还没有一款优雅的阔腿裤那你就OUT啦！无论是搭配优雅的衬衫
+                            <!-- 这里请截取字符串，不要超过容器高度 -->
+                            <i class="ico_god ico_god2">”</i>
+                        </p>
+                    </dd>
+                </dl>
+                <!-- 按钮切换上面的dl -->
+                <div class="god_nd_btn">
+                    <a class="god_nd_prev fl" href="###">&lt;</a>
+                    <a class="god_nd_next fr" href="###">&gt;</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- 女神经04 -->
+<div class="wrap">
+    <div class="goddess group mb50">
+        <div class="god_img group">
+            <div class="god_img_wi fl"><img src="../images/home_wi4.jpg"></div>
+            <div class="god_img_wt fl"><img src="../images/home_wt4.gif"></div>
+        </div>
+        <!-- 下面有颜色class区分 -->
+        <div class="god_newbox god_blue">
+            <!-- 列表 -->
+            <div class="god_nlist fr">
+                <div class="god_nlist_body">
+                    <dl>
+                        <dt><a href="#">2015裤子最流行 九分阔腿裤搭配显出美腿</a></dt>
+                        <dd>今年阔腿裤大热，如果你还没有一款优雅的阔腿裤那你就OUT啦！无论是搭配优雅的衬衫，还是搭配简约的T恤衫...</dd>
+                    </dl>
+                    <dl>
+                        <dt><a href="#">条纹T恤清新显瘦 搭配达人教你穿出气质时尚</a></dt>
+                        <dd>这款条纹T恤款式简单，加入蕾丝装饰，增添了精致浪漫的味道，多了几分淑女气质...</dd>
+                    </dl>
+                    <dl>
+                        <dt><a href="#">第68届戛纳红毯 张馨予“红配绿”范冰冰变陪衬</a></dt>
+                        <dd>张馨予第一次走上戛纳电影节的红毯，可谓是费尽心思，这款“东北大棉袄”的造型，用力过猛 ...</dd>
+                    </dl>
+                </div>
+            </div>
+            <!-- 详情 -->
+            <div class="god_ndetail pr fl">
+                <dl>
+                    <dt><a href="#">白T恤搭配技巧 8种简约穿法很适合夏季</a></dt>
+                    <dd>
+                        <p class="god_p">
+                            <i class="ico_god ico_god1">“</i>
+                            这款条纹T恤款式简单，加入蕾丝装饰，增添了精致浪漫的味道，多了几分淑女气质 今年阔腿裤大热，如果你还没有一款优雅的阔腿裤那你就OUT啦！无论是搭配优雅的衬衫
+                            <!-- 这里请截取字符串，不要超过容器高度 -->
+                            <i class="ico_god ico_god2">”</i>
+                        </p>
+                    </dd>
+                </dl>
+                <!-- 按钮切换上面的dl -->
+                <div class="god_nd_btn">
+                    <a class="god_nd_prev fl" href="###">&lt;</a>
+                    <a class="god_nd_next fr" href="###">&gt;</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- /女神经 -->
+
+<!-- 求搭配标题 -->
+<div class="collocation mb50">
+    <div class="coll_pink_t">
+        <span class="coll_zh">求 搭 配</span>
+        <span class="coll_en">OR THE COLLOCATION</span>
+    </div>
+    <div class="coll_pur_t">
+        <a href="#">发布我的请求<i class="q ico_coll1"></i></a>
+    </div>
+    <div class="coll_purple"></div>
+    <div class="coll_pink"></div>
+</div>
+
+<!-- 求搭配内容 -->
+
+<div class="wrap mb50">
+    <!-- 图片 -->
+    <div class="coll_imgs group">
+
+        <div class="coll_imgbox">
+            <div class="coll_inner">
+                <div class="coll_inner_t">
+                    <a href="#">
+                        2015裤子最流行<br>
+                        九分阔腿裤搭配显出美腿
+                    </a>
+                </div>
+                <p>浅蓝色七分阔腿裤,笔挺的西装面料彰显高 品质,搭配灯笼袖上衣,抽象印花富有时髦 </p>
+            </div>
+            <div class="coll_filter filter50"></div>
+            <img src="../images/coll_img01.jpg">
+        </div>
+        <div class="coll_imgbox">
+            <div class="coll_inner">
+                <div class="coll_inner_t">
+                    <a href="#">
+                        2015裤子最流行<br>
+                        九分阔腿裤搭配显出美腿
+                    </a>
+                </div>
+                <p>浅蓝色七分阔腿裤,笔挺的西装面料彰显高 品质,搭配灯笼袖上衣,抽象印花富有时髦 </p>
+            </div>
+            <div class="coll_filter filter50"></div>
+            <img src="../images/coll_img02.jpg">
+        </div>
+    </div>
+    <!-- 列表 -->
+    <div class="coll_nlist">
+        <div class="coll_btn coll_prev"><i class="q ico_collp"></i></div>
+        <div class="coll_btn coll_next"><i class="q ico_colln"></i></div>
+        <div class="coll_nl_wrap">
+            <div class="coll_nl_list">
+                <dl class="coll_nl_box">
+                    <dt class="coll_nl_title">晚上出去约会，求一件简单的外套搭配。</dt>
+                    <dd class="coll_nl_det">今天晚上出去有个约会，心仪已久的一个男神。上传一张照片，是今天晚上穿的。求大神指教，来一件推荐的外套。</dd>
+                    <dd class="coll_nl_reply"><a href="#">点击回复</a></dd>
+                </dl>
+                <dl class="coll_nl_box">
+                    <dt class="coll_nl_title">晚上出去约会，求一件简单的外套搭配。</dt>
+                    <dd class="coll_nl_det">今天晚上出去有个约会，心仪已久的一个男神。上传一张照片，是今天晚上穿的。求大神指教，来一件推荐的外套。</dd>
+                    <dd class="coll_nl_reply"><a href="#">点击回复</a></dd>
+                </dl>
+                <dl class="coll_nl_box">
+                    <dt class="coll_nl_title">晚上出去约会，求一件简单的外套搭配。</dt>
+                    <dd class="coll_nl_det">今天晚上出去有个约会，心仪已久的一个男神。上传一张照片，是今天晚上穿的。求大神指教，来一件推荐的外套。</dd>
+                    <dd class="coll_nl_reply"><a href="#">点击回复</a></dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- 标题 -->
+<div class="wrap ">
+    <div class="line_title mb30 pr">
+        <div class="line_mid">
+            <div class="lt_en">BEST SELLERS</div>
+            <div class="lt_zh">据说穿这些的都变成了女神!!!</div>
+        </div>
+        <div class="lt_line"></div>
+    </div>
+</div>
+
+<!-- 商品列表 -->
+<div class="wrap">
+    <div class="goods_tab">
+        <ul class="goods_ul">
+            <li><span>优雅</span></li>
+            <li><span>商务</span></li>
+            <li class="focus"><span>运动</span></li>
+            <li><span>清新</span></li>
+            <li><span>可爱</span></li>
+        </ul>
+    </div>
+    <!-- 运动 -->
+    <div class="goods_box">
+        <div class="goods_imgs mb30"><img src="../images/goods_img03.jpg"></div>
+        <div class="goods_wrap">
+            <ul class="good_list_ul group">
+                <li>
+                    <div class="spec_t goods pr">
+                        <div class="spec_price">¥1999</div>
+                        <div class="spec_links">
+                            <a href="#" class="spec_links_t">2015春装新款<br>中长款甜美抹胸式连衣裙</a>
+                            <div class="spec_brand">
+                                <img src="../images/temp_logo.gif" width="80" height="48">
+                                <span>品牌商名称</span>
+                            </div>
+                        </div>
+                        <div class="spec_linksbg filter50"></div>
+                        <div class="spec_filter filter50 hide"></div>
+                        <img src="../images/spec_b1.jpg">
+                    </div>
+                </li>
+                <li>
+                    <div class="spec_t goods pr">
+                        <div class="spec_price">¥1999</div>
+                        <div class="spec_links">
+                            <a href="#" class="spec_links_t">2015春装新款<br>中长款甜美抹胸式连衣裙</a>
+                            <div class="spec_brand">
+                                <img src="../images/temp_logo.gif" width="80" height="48">
+                                <span>品牌商名称</span>
+                            </div>
+                        </div>
+                        <div class="spec_linksbg filter50"></div>
+                        <div class="spec_filter filter50 hide"></div>
+                        <img src="../images/spec_b2.jpg">
+                    </div>
+                </li>
+                <li>
+                    <div class="spec_t goods pr">
+                        <div class="spec_price">¥1999</div>
+                        <div class="spec_links">
+                            <a href="#" class="spec_links_t">2015春装新款<br>中长款甜美抹胸式连衣裙</a>
+                            <div class="spec_brand">
+                                <img src="../images/temp_logo.gif" width="80" height="48">
+                                <span>品牌商名称</span>
+                            </div>
+                        </div>
+                        <div class="spec_linksbg filter50"></div>
+                        <div class="spec_filter filter50 hide"></div>
+                        <img src="../images/spec_b1.jpg">
+                    </div>
+                </li>
+                <li>
+                    <div class="spec_t goods pr">
+                        <div class="spec_price">¥1999</div>
+                        <div class="spec_links">
+                            <a href="#" class="spec_links_t">2015春装新款<br>中长款甜美抹胸式连衣裙</a>
+                            <div class="spec_brand">
+                                <img src="../images/temp_logo.gif" width="80" height="48">
+                                <span>品牌商名称</span>
+                            </div>
+                        </div>
+                        <div class="spec_linksbg filter50"></div>
+                        <div class="spec_filter filter50 hide"></div>
+                        <img src="../images/spec_b1.jpg">
+                    </div>
+                </li>
+                <li>
+                    <div class="spec_t goods pr">
+                        <div class="spec_price">¥1999</div>
+                        <div class="spec_links">
+                            <a href="#" class="spec_links_t">2015春装新款<br>中长款甜美抹胸式连衣裙</a>
+                            <div class="spec_brand">
+                                <img src="../images/temp_logo.gif" width="80" height="48">
+                                <span>品牌商名称</span>
+                            </div>
+                        </div>
+                        <div class="spec_linksbg filter50"></div>
+                        <div class="spec_filter filter50 hide"></div>
+                        <img src="../images/spec_b2.jpg">
+                    </div>
+                </li>
+                <li>
+                    <div class="spec_t goods pr">
+                        <div class="spec_price">¥1999</div>
+                        <div class="spec_links">
+                            <a href="#" class="spec_links_t">2015春装新款<br>中长款甜美抹胸式连衣裙</a>
+                            <div class="spec_brand">
+                                <img src="../images/temp_logo.gif" width="80" height="48">
+                                <span>品牌商名称</span>
+                            </div>
+                        </div>
+                        <div class="spec_linksbg filter50"></div>
+                        <div class="spec_filter filter50 hide"></div>
+                        <img src="../images/spec_b1.jpg">
+                    </div>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+    
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- /主内容区 -->
+
+<!-- 底部公共部分 -->
+<footer class="footer">
+    <div class="wrap">
+
+        <div class="help_list group">
+            <dl class="link_anim">
+                <dt>COLLECTION</dt>
+                <dd><a href="#" target="_blank">Women(1725)</a></dd>
+                <dd><a href="#" target="_blank">Men(635)</a></dd>
+                <dd><a href="#" target="_blank">Kids(2514)</a></dd>
+                <dd><a href="#" target="_blank">Comming Soon(76)</a></dd>
+            </dl>
+            <dl class="link_anim">
+                <dt>SITE</dt>
+                <dd><a href="#" target="_blank">Terms of service</a></dd>
+                <dd><a href="#" target="_blank">Privacy Policy</a></dd>
+                <dd><a href="#" target="_blank">Copyright Policy</a></dd>
+                <dd><a href="#" target="_blank">Press Kit</a></dd>
+                <dd><a href="#" target="_blank">Support</a></dd>
+            </dl>
+            <dl class="link_anim">
+                <dt>SHOP</dt>
+                <dd><a href="#" target="_blank">About us</a></dd>
+                <dd><a href="#" target="_blank">Shipping Metods</a></dd>
+                <dd><a href="#" target="_blank">career</a></dd>
+                <dd><a href="#" target="_blank">contact</a></dd>
+            </dl>
+            <dl class="link_anim">
+                <dt>SOCIAL</dt>
+                <dd>Shoper is made with love in Warsaw,</dd>
+                <dd>2014 © All Rights reserved.EI Passion</dd>
+            </dl>
+            
+    
+        </div>
+    </div>
+
+</footer>
+
+
+
+<!-- /底部公共部分 -->
+
+
+
+
+</body>
+</html>

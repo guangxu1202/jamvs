@@ -1,0 +1,145 @@
+<!Doctype html>
+<html lang="zh">
+<head>
+	<meta charset="utf-8">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+	<title>看厦门--竞赛答题</title>
+	<meta id="viewport" name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+	<meta name="format-detection" content="telephone=no">
+	
+	<link rel="stylesheet" type="text/css" href="../style/jquery.mobile.min.css">
+	<link rel="stylesheet" type="text/css" href="../style/common.css">
+</head>
+<body>
+
+
+<div class="all-wrap">
+	<div class="all-header">草莓知识竞赛</div>
+	<!-- 题目列表 -->
+	<div class="question">
+		<div class="qs-title">1. 草莓一般是什么颜色的？</div>
+		<div class="qs-body">
+			<label><input type="radio" name="r1">黄色黄色黄色黄色黄色黄色黄色黄色黄色黄色黄色黄色黄色黄色黄色黄色黄色黄色黄色黄色黄色黄色</label>
+			<label><input type="radio" name="r1">黑色</label>
+			<label><input type="radio" name="r1">红色</label>
+			<label><input type="radio" name="r1">蓝色</label>
+		</div>
+	</div>
+
+	<div class="question">
+		<div class="qs-title">1. 草莓一般是什么颜色的？</div>
+		<div class="qs-body">
+			<label><input type="radio" name="r1">黄色黄色黄色黄色黄色黄色黄色黄色黄色黄色黄色黄色黄色黄色黄色黄色黄色黄色黄色黄色黄色黄色</label>
+			<label><input type="radio" name="r1">黑色</label>
+			<label><input type="radio" name="r1">红色</label>
+			<label><input type="radio" name="r1">蓝色</label>
+		</div>
+	</div>
+
+	<div class="question">
+		<div class="qs-title">1. 草莓一般是什么颜色的？</div>
+		<div class="qs-body">
+			<!-- ******图片尺寸:350*230 -->
+			<!-- ******图片尺寸:350*230 -->
+			<!-- ******图片尺寸:350*230 -->
+
+			<label>
+				<input type="radio" name="r1">
+				<img src="../images/temp01.jpg">
+			</label>
+			<label>
+				<input type="radio" name="r1">
+				<img src="../images/temp02.jpg">
+			</label>
+			<label>
+				<input type="radio" name="r1">
+				<img src="../images/temp03.jpg">
+			</label>
+			<label>
+				<input type="radio" name="r1">
+				<img src="../images/temp04.jpg">
+			</label>
+
+		</div>
+	</div>
+
+	<!-- 个人信息部分 -->
+	<div class="regist">
+		<h1 class="regist-head">填写个人信息</h1>
+
+		<div class="box-b">
+			<p class="box-a-s">姓名：</p>
+			<input class="box-a-i" type="text" placeholder="必填">
+		</div>
+		<div class="box-b">
+            <P class="box-a-s">下拉选择：</P>
+            <select name="select-custom-21 box-a-i" id="select-custom-21" data-native-menu="false">
+                <option value="choose-one" data-placeholder="true">请选择</option>
+                <option value="1">选择一二三四五</option>
+                <option value="2">选择一二三四五</option>
+                <option value="3">选择一二三四五</option>
+                <option value="4">选择一二三四五</option>
+            </select>
+        </div>
+		<div class="box-b">
+			<p class="box-a-s">备注：</p>
+			<div class="box-b-t"><textarea placeholder="必填" rows = "20"></textarea></div>
+		</div>
+		<div class="box-c">
+			<p class="box-a-s">身份证正面照：</p>
+			<input class="box-a-i" type="text" placeholder="必填">
+			<input type="file" class="ico-file" onchange="sendFile(this)">
+			<span class="ico-file-img"></span>
+		</div>
+
+		
+
+
+		
+	</div>
+	<div class="box-submit">
+		<button type="submit">提交</button>
+	</div>
+
+</div>
+
+
+
+
+<footer class="footbar">
+	<div class="fl">
+		<a href="#" class="f-ico ico-back"></a>
+	</div>
+	<div class="fr">
+		<a href="#" class="f-ico ico-share"></a>
+	</div>
+</footer>
+
+<script type="text/javascript" src="../js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="../js/jquery.mobile.min.js"></script>
+
+<script type="text/javascript">
+	$(".box-submit button").click(function(){
+		
+		// 提示方法
+		remind("姓名栏为空，请填写姓名!");
+	})
+
+
+
+	var reminding = true;
+	function remind(str){
+		if (reminding) {
+			reminding = false;
+			$("body").append("<div class='tips'>"+str+"</div>");
+			setTimeout(function(){$(".tips").fadeOut(500,function(){$(this).remove();reminding = true;});},1000)
+		};
+	}
+
+	function sendFile(obj){
+		$(obj).parents(".box-c").find(".box-a-i").val($(obj).val());
+	}
+</script>
+</body>
+</html>

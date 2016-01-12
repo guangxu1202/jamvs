@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta charset="utf-8">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+	<title>欢聚--下载</title>
+	<meta id="viewport" name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" type="text/css" href="style/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="style/common.css">
+</head>
+<body>
+
+<header class="header pr">
+	<div class="container">
+		<!-- <h1>欢聚</h1>
+		<h6>于此，此时</h6> -->
+		<div class="logo">
+			<img src="images/logo.png">
+		</div>
+		<div class="download">
+			<button class="d-btn d-red w-ios"><em>Appstore下载</em></button>
+			<button class="d-btn d-red w-android down-android"><em>Android下载</em></button>
+		</div>
+		<div class="arr"></div>
+	</div>
+</header>
+
+
+<section class="explain">
+	<div class="container">
+		<div class="app-str">欢聚是一款能让社团内部新老成员联络感情、分享心情的校园社交App</div>
+		<div class="exp-list row">
+			<div class="col-md-4">
+				<dl class="inner">
+					<dt>
+						<i class="circle c1"></i>
+						<p><strong>轻松找到社团好基友</strong></p>
+					</dt>
+					<dd>
+						<p>加微信？加QQ？</p>
+						<p>留电话？太out！</p>
+						<p>只需一步注册，从此社团基友，</p>
+						<p>一键畅聊！</p>
+					</dd>
+				</dl>
+			</div>
+			<div class="col-md-4">
+				<dl class="inner">
+					<dt>
+						<i class="circle c2"></i>
+						<p><strong>一起群聊一起high</strong></p>
+					</dt>
+					<dd>
+						<p>最大支持2000人的群聊工具，</p>
+						<p>任何人都能发起社团内部的主题</p>
+						<p>讨论和聚会，还不赶快来次线上</p>
+						<p>party？！</p>
+					</dd>
+				</dl>
+			</div>
+			<div class="col-md-4">
+				<dl>
+					<dt>
+						<i class="circle c3"></i>
+						<p><strong>聊天新方式</strong></p>
+					</dt>
+					<dd>
+						<p>想加入感兴趣的主题，</p>
+						<p>发起人却傲娇的设置了权限？</p>
+						<p>那就快快申请 code，</p>
+						<p>加入有趣话题！</p>
+					</dd>
+				</dl>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<section class="example-a">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 col-md-push-6">
+				<p  class="example-mid"><img src="images/pic1.png"></p>
+			</div>
+			<div class="col-md-6 col-md-pull-6">
+				<p><img src="images/phone1.png" class="phone1"></p>
+			</div>
+	
+		</div>
+	</div>
+</section>
+
+<section class="example-b">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<p  class="example-mid"><img src="images/pic2.png"></p>
+			</div>
+			<div class="col-md-6">
+				<p><img src="images/phone2.png" class="phone2"></p>
+			</div>
+	
+		</div>
+	</div>
+</section>
+
+
+<footer class="footer">
+	<dl class="foot-str">
+		<dt><img src="images/logo_b.png"></dt>
+		<dd>现在让我们“欢聚”在一起吧</dd>
+	</dl>
+	<div class="download">
+		<button class="d-btn d-grey g-ios"><em>Appstore下载</em></button>
+		<button class="d-btn d-grey g-android down-android" id="J_weixin"><em>Android下载</em></button>
+	</div>
+</footer>
+<div id="weixin-tip">
+	<p><img src="images/live_weixin.png" alt="微信打开"/><span id="close" title="关闭" class="close">×</span></p>
+</div>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript">
+
+var is_weixin = (function() {
+    var ua = navigator.userAgent.toLowerCase();
+    if (ua.match(/MicroMessenger/i) == "micromessenger") {
+        return true;
+    } else {
+        return false;
+    }
+})();
+
+
+$(function(){
+	var winHeight = typeof window.innerHeight != 'undefined' ? window.innerHeight : document.documentElement.clientHeight;
+	var btn = document.getElementById('J_weixin');
+	var tip = document.getElementById('weixin-tip');
+	var close = document.getElementById('close');
+	close.onclick = function(){
+		tip.style.display = 'none';
+	}
+	$(".down-android").click(function(){
+		var w = $(document).width();
+		if (w < 900) {
+			// 直接下载
+			if(is_weixin){
+				tip.style.height = winHeight + 'px';
+				tip.style.display = 'block';
+				return false;
+			}else{
+				window.location.href="http://www.baidu.com";
+			}
+
+
+		}else{
+			// 弹出二维码
+			$(".bfilter").css("height",$(document).height()).show();
+			$(".popup").show();
+			$(".popup").css("top",$(document).scrollTop()-$(".popup").height()/2+($(window).height()/2));
+		};
+	})
+
+})
+
+function pop_colse(){
+    $(".bfilter,.popup").hide();
+}
+</script>
+<div class="popup">
+	<div class="pop_head">
+        <a href="javascript:pop_colse()" class="pop_c">X</a>
+        <b>Android下载</b>
+    </div>
+    <div class="pop_body clearfix row">
+    	<div class="col-md-6 code">
+    		<p>
+    			<img src="images/Android.gif">
+	    	</p>
+	    	<span>手机扫描二维码下载</span>
+    	</div>
+    	<div class="col-md-6 d-pc">
+    		<p><a href="#">点击直接下载到电脑</a></p>
+    	</div>
+    	
+    </div>
+</div>
+<div class="bfilter"></div>
+</body>
+</html>

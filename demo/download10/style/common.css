@@ -1,0 +1,89 @@
+html{height:100%;}
+body{font-family: "Microsoft YaHei"; height: 100%; font-size: 16px;}
+.pr{position: relative;}
+img{max-width: 100%;}
+
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+.clearfix{*+height:1%;}
+
+/*header*/
+.header{height: 100%; background: url(img/top_bg.jpg) no-repeat center ; background-size: cover; text-align: center; color: #fff; min-height: 500px;}
+.header h1{margin: 0; font-size: 200px;}
+.header h6{font-size: 42px;}
+.logo{ padding: 0px 30px; width: 100%; position: absolute; top: 20%; text-align: center; left: 0;}
+.container{padding:0 1%;}
+
+.header .download{ position: absolute; width: 100%;left: 0; bottom: 100px;}
+	.download button{ border: none; border-radius: 5px;height: 60px; text-indent: -999rem; outline:none;line-height:60px; width: 47%; max-width: 280px; font-size: 18px; margin: 0px 1%;}
+	.download .d-red{background-color: rgba(215,22,24,.8);}
+	.download .d-grey{background-color: rgba(255,255,255,.8);}
+	.download .d-red:hover{background-color: rgba(215,22,24,1);}
+	.download .d-grey:hover{background-color: rgba(255,255,255,1);}
+	.w-ios{ background: url(img/w-ios.png) no-repeat center; background-size: auto 60%;}
+	.w-android{ background: url(img/w-android.png) no-repeat center; background-size: auto 60%;}
+	.g-ios{ background: url(img/g-ios.png) no-repeat center; background-size: auto 60%;}
+	.g-android{ background: url(img/g-android.png) no-repeat center; background-size: auto 60%;}
+
+.arr{ background: url(img/arr.png) no-repeat center; height: 30px; width: 100%; position: absolute; bottom: 10px; left: 0px; background-size: auto 50%;}
+
+/*explain*/
+.explain{ background-color: #fff; text-align: center; padding: 100px 0px;}
+	.circle{background-image: url(img/c.png); background-repeat: no-repeat; width: 130px; height: 130px; display: inline-block;}
+	.c1{background-position: 0 0;}
+	.c2{background-position: 0 -130px;}
+	.c3{background-position: 0 -260px;}
+
+	.app-str{ font-size: 48px; color: #656666;  padding:0px 80px 100px;}
+
+.exp-list{}
+	.exp-list dt{color: #333;}
+	.exp-list dt p{ padding: 20px 0 10px; font-size: 20px;}
+	.exp-list dd{color: #666;}
+
+	.exp-list .inner{ border-right: 1px solid #c6c6c6; padding: 10px 0px;}
+
+/*example-a*/
+.example-a{text-align: center; padding: 100px 0px; background-color: #f3f4f4;}
+	.example-a p { padding: 0px 100px;}
+	.example-a .example-mid{margin-top: 150px; text-align: left; padding-left: 50px;}
+
+/*example-b*/
+.example-b{text-align: center; padding: 100px 0px; background-color: #e5e4e4;}
+	.example-b p { padding: 0px 100px;}
+	.example-b .example-mid{margin-top: 150px; text-align: left; padding-right: 50px;}
+
+/*footer*/
+.footer{background-color: #515151; padding: 100px 0; text-align: center;}
+.foot-str { color: #fff; font-size: 30px; margin-bottom: 100px;}
+.foot-str dd{ padding-top: 50px;}
+
+/*popup*/
+.bfilter{ position: absolute; width: 100%; top:0;left: 0; background-color: #000;-moz-opacity:0.5;opacity:0.5;filter:alpha(opacity=50); z-index: 998; display: none;}
+
+.popup{display: none; position: absolute; z-index: 999; left: 50%; top: 50%; width: 680px; margin-left: -340px; background-color: #fff;}
+	.pop_head{background-color: #f0f0f0; border-bottom: 1px solid #ccc; height: 40px; line-height: 40px; padding-left: 20px;}
+	a.pop_c{ font-size: 18px; color: #666;  margin-right: 10px; display: block; width: 30px; height: 30px; text-align: center; font-family: arial; float: right;}
+		a.pop_c:hover{text-decoration: none; color: #000;}
+
+	.pop_body{text-align: center; padding: 60px 0;}
+		.code{color: #666; border-right: 1px solid #ccc; padding-left: 10%;}
+		.d-pc a{ display: inline-block; line-height: 130px; margin-right: 20%;}
+
+#weixin-tip{display:none;position:fixed;left:0;top:0;background:rgba(0,0,0,0.8);filter:alpha(opacity=80);width:100%;height:100%;z-index:100;}
+#weixin-tip p{text-align:center;margin-top:10%;padding:0 5%;position:relative;}
+#weixin-tip .close{color:#fff;padding:5px;font:bold 20px/24px simsun;text-shadow:0 1px 0 #ddd;position:absolute;top:0;left:5%;}
+
+
+@media(min-width:1px) and (max-width: 991px){
+	.download button{ font-size: 14px; height: 50px; line-height: 50px;}
+	.explain,.example-a,.example-b,.footer{padding: 40px 0px; overflow: hidden;}
+	.app-str{ padding: 10px 10px 20px; font-size: 20px; margin-bottom: 20px; /*border-bottom: 1px solid #c6c6c6;*/}
+	.exp-list .inner{ border-right: none; /*border-bottom:  1px solid #c6c6c6;*/}
+	.example-a p ,.example-b p {padding: 0px 40px;}
+	.example-a .example-mid,.example-b .example-mid{margin-top: 0px; padding: 0px 50px;}
+	.foot-str{font-size: 18px; margin-bottom:40px;}
+	.foot-str dd{padding-top: 30px;}
+	.phone1{ margin-right: -1.6rem; margin-top: 10px;}
+	.phone2{ margin-left: -1.6rem; margin-top: 10px;}
+
+}

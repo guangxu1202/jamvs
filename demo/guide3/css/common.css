@@ -1,0 +1,129 @@
+/********************全局********************/
+body,form,dl,dd,ul{ margin:0; padding:0; list-style:none; }
+body,td,div,span,p,a,input,select{ color:#666666; font-family:microsoft yahei,arial ;}
+img{ border:0; }
+html *{outline: 0;}
+
+html{background-color: #9c86ea;height: 100%;}
+body{ height: 100%;}
+.loading{ position: relative;width: 100%; height: 100%; z-index: 10000; background-color: #fff; text-align: center;}
+        .loading img{ position: absolute; top: 50%; left: 50%; margin-top: -16px; margin-left: -16px;}
+.wrap{ height: 100%;background: url(img/bg.png) no-repeat bottom center; background-size: 50% auto; width: 9rem; margin: 0 auto; position: relative;}
+.box{ width: 2rem;position: absolute;}
+.box img{max-width: 100%;}
+.box .title{ line-height: 1rem; text-align: center; color: #fff; font-size: 18px;}
+.box1{ left:1.8rem; top:2rem;}
+.box2{ right: 1.8rem; top: 2rem;}
+.box3{ left:  1.8rem;; top: 5.5rem;}
+.box4{ right:  1.8rem;; top: 5.5rem;}
+.box4 img{ max-width: 115%; margin-top: -23%; margin-left: -15%;}
+.box1{animation:lb 5s;-webkit-animation:lb 5s;}
+.box2{animation:qk 5s;-webkit-animation:qk 5s;}
+.box3{animation:ly 5s;-webkit-animation:ly 5s;}
+.box4{animation:wp 5s;-webkit-animation:wp 5s;}
+
+.box1 .img{animation:lbi 5s;-webkit-animation:lbi 5s;}
+.box2 .img{animation:qki 5s;-webkit-animation:qki 5s;}
+.box3 .img{animation:lyi 5s;-webkit-animation:lyi 5s;}
+.box4 .img{animation:wpi 5s;-webkit-animation:wpi 5s;}
+
+
+@keyframes lb{
+	0%   {left:2rem; top:2rem;}
+	10%  {left:2.5rem; top:2rem;}
+	25%  {left:2.5rem; top:2rem;}
+	45% {left:1.8rem; top:2rem;}
+}
+
+
+@keyframes qk{
+	0%   {right:2rem; top:2rem;}
+	10%  {right:2.5rem; top:2rem;}
+	25%  {right:2.5rem; top:2rem;}
+	45% {right:1.8rem; top:2rem;}
+}
+
+@keyframes ly{
+	0%   {left:2rem; top:5.5rem;}
+	10%  {left:2.5rem; top:5.5rem;}
+	25%  {left:2.5rem; top:5.5rem;}
+	45% {left:1.8rem; top:5.5rem;}
+}
+
+@keyframes wp{
+	0%   {right:2rem; top:5.5rem;}
+	10%  {right:2.5rem; top:5.5rem;}
+	25%  {right:2.5rem; top:5.5rem;}
+	45% {right:1.8rem; top:5.5rem;}
+}
+
+@-webkit-keyframes lb{
+	0%   {left:2rem; top:2rem;}
+	10%  {left:2.5rem; top:2rem;}
+	25%  {left:2.5rem; top:2rem;}
+	45% {left:1.8rem; top:2rem;}
+}
+
+@-webkit-keyframes qk{
+	0%   {right:2rem; top:2rem;}
+	10%  {right:2.5rem; top:2rem;}
+	25%  {right:2.5rem; top:2rem;}
+	45% {right:1.8rem; top:2rem;}
+}
+
+@-webkit-keyframes ly{
+	0%   {left:2rem; top:5.5rem;}
+	10%  {left:2.5rem; top:5.5rem;}
+	25%  {left:2.5rem; top:5.5rem;}
+	45% {left:1.8rem; top:5.5rem;}
+}
+
+@-webkit-keyframes wp{
+	0%   {right:2rem; top:5.5rem;}
+	10%  {right:2.5rem; top:5.5rem;}
+	25%  {right:2.5rem; top:5.5rem;}
+	45% {right:1.8rem; top:5.5rem;}
+}
+
+@keyframes lbi{
+	10%{transform:rotate(0deg);}
+	20%{transform:rotate(-9deg);}
+	25%{transform:rotate(0deg);}
+}
+@keyframes qki{
+	10%{transform:rotate(0deg);}
+	20%{transform:rotate(9deg);}
+	25%{transform:rotate(0deg);}
+}
+@keyframes lyi{
+	10%{transform:rotate(0deg);}
+	20%{transform:rotate(-9deg);}
+	25%{transform:rotate(0deg);}
+}
+@keyframes wpi{
+	10%{transform:rotate(0deg);}
+	20%{transform:rotate(9deg);}
+	25%{transform:rotate(0deg);}
+}
+
+@-webkit-keyframes lbi{
+	10%{-webkit-transform:rotate(0deg);}
+	20%{-webkit-transform:rotate(-9deg);}
+	25%{-webkit-transform:rotate(0deg);}
+}
+@-webkit-keyframes qki{
+	10%{-webkit-transform:rotate(0deg);}
+	20%{-webkit-transform:rotate(9deg);}
+	25%{-webkit-transform:rotate(0deg);}
+}
+@-webkit-keyframes lyi{
+	10%{-webkit-transform:rotate(0deg);}
+	20%{-webkit-transform:rotate(-9deg);}
+	25%{-webkit-transform:rotate(0deg);}
+}
+@-webkit-keyframes wpi{
+	10%{-webkit-transform:rotate(0deg);}
+	20%{-webkit-transform:rotate(9deg);}
+	25%{-webkit-transform:rotate(0deg);}
+}
+

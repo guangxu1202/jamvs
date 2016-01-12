@@ -1,0 +1,58 @@
+<!Doctype>
+<html>
+<head>
+<title>demo</title>
+	<meta charset="utf-8" />
+	<!--允许全屏-->
+	<meta content="yes" name="apple-mobile-web-app-capable" />
+	<meta content="yes" name="apple-touch-fullscreen" />    
+	<meta content="telephone=no,email=no" name="format-detection" />
+	<meta content="fullscreen=yes,preventMove=no" name="ML-Config" />
+	<meta content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0" name="viewport" />
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<script type="text/javascript" src="css/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript">
+	// flexible.js
+	!function(a){function b(){var b=g.getBoundingClientRect().width;b/c>540&&(b=540*c),a.rem=b/9,g.style.fontSize=a.rem+"px"}var c,d,e,f=a.document,g=f.documentElement,h=f.querySelector('meta[name="viewport"]'),i=f.querySelector('meta[name="flexible"]');if(h){console.warn("将根据已有的meta标签来设置缩放比例");var j=h.getAttribute("content").match(/initial\-scale=(["']?)([\d\.]+)\1?/);j&&(d=parseFloat(j[2]),c=parseInt(1/d))}else if(i){var j=i.getAttribute("content").match(/initial\-dpr=(["']?)([\d\.]+)\1?/);j&&(c=parseFloat(j[2]),d=parseFloat((1/c).toFixed(2)))}if(!c&&!d){var k=(a.navigator.appVersion.match(/android/gi),a.navigator.appVersion.match(/iphone/gi)),c=a.devicePixelRatio;c=k?c>=3?3:c>=2?2:1:1,d=1/c}if(g.setAttribute("data-dpr",c),!h)if(h=f.createElement("meta"),h.setAttribute("name","viewport"),h.setAttribute("content","initial-scale="+d+", maximum-scale="+d+", minimum-scale="+d+", user-scalable=no"),g.firstElementChild)g.firstElementChild.appendChild(h);else{var l=f.createElement("div");l.appendChild(h),f.write(l.innerHTML)}a.dpr=c,a.addEventListener("resize",function(){clearTimeout(e),e=setTimeout(b,300)},!1),a.addEventListener("pageshow",function(a){a.persisted&&(clearTimeout(e),e=setTimeout(b,300))},!1),"complete"===f.readyState?f.body.style.fontSize=12*c+"px":f.addEventListener("DOMContentLoaded",function(){f.body.style.fontSize=12*c+"px"},!1),b()}(window);
+
+
+		window.onload = function(){
+			$(".loading").hide();
+			$("body").append("<div class='wrap'>		<div class='box box1'>			<div class='img'><img src='css/img/lb.png'></div>			<div class='title'>礼包</div>		</div>		<div class='box box2'>			<div class='img'><img src='css/img/qk.png'></div>			<div class='title'>取款</div>		</div>		<div class='box box3'>			<div class='img'><img src='css/img/ly.png'></div>			<div class='title'>猎艳</div>		</div>		<div class='box box4'>			<div class='img'><img src='css/img/wp.png'></div>			<div class='title'>王牌</div>		</div>	</div>")
+            // $(".box1").animate({left:"2.5rem",top:"2rem"},500,function(){
+            // 	$(this).animate({top:"1.8rem"},100,function(){
+            // 		$(this).animate({top:"2rem"},100,function(){
+            // 			$(this).animate({left:"1.8rem"},500)
+            // 		})
+            // 	})
+            // })
+            // $(".box2").animate({right:"2.5rem",top:"2rem"},500,function(){
+            // 	$(this).animate({top:"1.8rem"},100,function(){
+            // 		$(this).animate({top:"2rem"},100,function(){
+            // 			$(this).animate({right:"1.8rem"},500)
+            // 		})
+            // 	})
+            // })
+            // $(".box3").animate({left:"2.5rem",top:"5.5rem"},500,function(){
+            // 	$(this).animate({top:"5.3rem"},100,function(){
+            // 		$(this).animate({top:"5.5rem"},100,function(){
+            // 			$(this).animate({left:"1.8rem"},500)
+            // 		})
+            // 	})
+            // })
+            // $(".box4").animate({right:"2.5rem",top:"5.5rem"},500,function(){
+            // 	$(this).animate({top:"5.3rem"},100,function(){
+            // 		$(this).animate({top:"5.5rem"},100,function(){
+            // 			$(this).animate({right:"1.8rem"},500)
+            // 		})
+            // 	})
+            // })
+         }
+	</script>
+</head>
+<body>
+	<div class="loading" id="loading"><img src="css/img/loading.jpg"></div>
+	<div style="display:none;"><img src='css/img/lb.png'><img src='css/img/qk.png'><img src='css/img/ly.png'><img src='css/img/wp.png'></div>
+
+</body>
+</html> 
