@@ -1,0 +1,115 @@
+<div class="bjui-pageHeader">
+    <form id="pagerForm" data-toggle="ajaxsearch" action="" method="post">
+        <!-- b-jui框架 -->
+        <input type="hidden" name="pageSize" value="${model.pageSize}">
+        <input type="hidden" name="pageCurrent" value="${model.pageCurrent}">
+        <input type="hidden" name="orderField" value="${param.orderField}">
+        <input type="hidden" name="orderDirection" value="${param.orderDirection}">
+
+        <!-- 搜索条 -->
+        <div class="bjui-searchBar">           
+            <label>客户地址：</label><input type="text" id="customNo" value="" name="code" class="form-control" size="10">&nbsp;
+           <button type="button" class="showMoreSearch" data-toggle="moresearch" data-name="custom"><i class="fa fa-angle-double-down"></i></button>
+           <button type="submit" class="btn-default" data-icon="search">查询</button>&nbsp;
+
+           <a class="btn btn-default" href="javascript:;" data-toggle="reloadsearch" data-clear-query="true" data-icon="undo">清空查询</a>
+            
+        </div>
+ <!-- 更多查询项 -->
+        <div class="bjui-moreSearch">
+            <label>&nbsp;用热面积:</label>
+            <input type="text" value="" name="profession" size="15" />
+			<label>&nbsp;室内温度:</label>
+            <input type="text" value="" name="profession" size="15" />
+			<label>&nbsp;设定温度:</label>
+            <input type="text" value="" name="profession" size="15" />
+            <label>数据时间：</label><input type="text" value="" name="profession" size="15" />
+        </div>
+    </form>
+</div>
+<div style="float:left; margin:5px 5px 0; width:13%;>
+ 	<div style="float:left; width:220px; height:240px; overflow:auto;">
+		<ul id="ztree222" class="ztree" data-toggle="ztree" data-expand-all="true" data-on-click="ZtreeClick">
+			<li data-id="1" data-pid="0" data-faicon="rss" data-faicon-close="cab">西三旗热力公司</li>
+			<li data-id="10" data-pid="1"  data-tabid="form-button" data-faicon="bell">供热站点1</li>
+			<li data-id="30" data-pid="10"  data-tabid="form-button" data-faicon="bell">泰欣苑小区</li>
+			<li data-id="31" data-pid="30"  data-tabid="form-button" data-faicon="bell">1号楼</li>
+			<li data-id="32" data-pid="31"  data-tabid="form-button" data-faicon="bell">101</li>
+			<li data-id="33" data-pid="31"  data-tabid="form-button" data-faicon="bell">102</li>
+			<li data-id="34" data-pid="31"  data-tabid="form-button" data-faicon="bell">201</li>
+			<li data-id="11" data-pid="1"  data-tabid="form-button" data-faicon="bell">供热站点2</li>
+			<li data-id="40" data-pid="11"  data-tabid="form-button" data-faicon="bell">东王庄小区</li>
+			<li data-id="41" data-pid="40"  data-tabid="form-button" data-faicon="bell">1号楼</li>
+			<li data-id="42" data-pid="41"  data-tabid="form-button" data-faicon="bell">101</li>
+			<li data-id="43" data-pid="41"  data-tabid="form-button" data-faicon="bell">102</li>
+			<li data-id="44" data-pid="41"  data-tabid="form-button" data-faicon="bell">201</li>
+			<li data-id="2" data-pid="0">宝能热力公司永泰供热厂</li>
+			<li data-id="20" data-pid="2"  data-tabid="table" data-faicon="signal">供热站点1</li>
+			<li data-id="21" data-pid="20"  data-tabid="table-fixed" data-faicon="rss-square">惠寺小区</li>
+			<li data-id="22" data-pid="21"  data-tabid="table-edit" data-faicon="bookmark-o">1号楼</li>
+			<li data-id="23" data-pid="22"  data-tabid="table-edit" data-faicon="bookmark-o">101</li>
+			<li data-id="24" data-pid="22"  data-tabid="table-edit" data-faicon="bookmark-o">102</li>
+			<li data-id="25" data-pid="22"  data-tabid="table-edit" data-faicon="bookmark-o">103</li>
+		</ul>
+	</div>                   
+</div>
+
+<div class="bjui-pageContent" style="padding:6px; left:180px; width:83%">
+    <table class="table table-bordered table-hover table-striped table-top" data-selected-multi="true" >
+        <thead>
+            <tr>
+				<th align="center"><input type="checkbox" class="checkboxCtrl" data-group="ids" data-toggle="icheck"></th>
+                <th align="center">小区</th>
+				<th align="center">楼栋</th>
+				<th align="center">户</th>
+                <th align="center">室内温度</th>
+                <th align="center">设定温度</th>
+				<th align="center">开阀时长</th>
+				<th align="center">数据时间</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            
+			<tr data-id="1">
+			 	<td align="center"><input type="checkbox" name="ids" data-toggle="icheck" value="1"></td>
+                 <td>泰欣苑小区</td>
+				 <td>1号楼</td>
+				 <td>101</td>
+				<td>25</td>
+				<td>26</td>
+				<td>12</td>
+				<td>2015-01-04</td>
+               
+            </tr>
+			<tr data-id="1">
+			 	<td align="center"><input type="checkbox" name="ids" data-toggle="icheck" value="1"></td>
+                 <td>泰欣苑小区</td>
+				 <td>1号楼</td>
+				 <td>102</td>
+				<td>25</td>
+				<td>26</td>
+				<td>12</td>
+				<td>2015-01-04</td>
+                
+            </tr>
+           
+        </tbody>
+    </table>
+</div>
+<div class="bjui-pageFooter">
+    <div class="pages">
+        <span>每页&nbsp;</span>
+        <div class="selectPagesize">
+            <select data-toggle="selectpicker" data-toggle-change="changepagesize">
+                <option value="30">30</option>
+                <option value="60">60</option>
+                <option value="120">120</option>
+                <option value="150">150</option>
+            </select>
+        </div>
+        <span>&nbsp;条，共 600 条</span>
+    </div>
+    <div class="pagination-box" data-toggle="pagination" data-total="600" data-page-size="30" data-page-current="1">
+    </div>
+</div>

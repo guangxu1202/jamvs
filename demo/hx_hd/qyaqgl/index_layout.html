@@ -1,0 +1,383 @@
+
+<script type="text/javascript">
+    //创建和初始化地图函数：
+    function initMap(){
+      createMap();//创建地图
+      setMapEvent();//设置地图事件
+      addMapControl();//向地图添加控件
+      addMapOverlay();//向地图添加覆盖物
+    }
+    function createMap(){ 
+      map = new BMap.Map("map"); 
+      map.centerAndZoom(new BMap.Point(116.304289,39.966677),15);
+    }
+    function setMapEvent(){
+      map.enableScrollWheelZoom();
+      map.enableKeyboard();
+      map.enableDragging();
+      map.enableDoubleClickZoom()
+    }
+    function addClickHandler(target,window){
+      target.addEventListener("click",function(){
+        target.openInfoWindow(window);
+      });
+    }
+    function addMapOverlay(){
+      var markers = [
+        {content:"3工单未处理 1紧急",title:"热力一公司(3)",imageOffset: {width:-46,height:-21},position:{lat:39.965571,lng:116.29085}},
+        {content:"4工单未处理 2紧急",title:"热力二公司(4)",imageOffset: {width:-46,height:-21},position:{lat:39.973036,lng:116.308313}},
+        {content:"5工单未处理 3紧急",title:"热力三公司(5)",imageOffset: {width:-46,height:-21},position:{lat:39.960317,lng:116.309679}}
+      ];
+      for(var index = 0; index < markers.length; index++ ){
+        var point = new BMap.Point(markers[index].position.lng,markers[index].position.lat);
+        var marker = new BMap.Marker(point,{icon:new BMap.Icon("http://api.map.baidu.com/lbsapi/createmap/images/icon.png",new BMap.Size(20,25),{
+          imageOffset: new BMap.Size(markers[index].imageOffset.width,markers[index].imageOffset.height)
+        })});
+        var label = new BMap.Label(markers[index].title,{offset: new BMap.Size(25,5)});
+        var opts = {
+          width: 200,
+          title: markers[index].title,
+          enableMessage: false
+        };
+        var infoWindow = new BMap.InfoWindow(markers[index].content,opts);
+        marker.setLabel(label);
+        addClickHandler(marker,infoWindow);
+        map.addOverlay(marker);
+      };
+    }
+    //向地图添加控件
+    function addMapControl(){
+      var scaleControl = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+      scaleControl.setUnit(BMAP_UNIT_IMPERIAL);
+      map.addControl(scaleControl);
+      var navControl = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:1});
+      map.addControl(navControl);
+      var overviewControl = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:true});
+      map.addControl(overviewControl);
+    }
+    var map;
+      initMap();
+  </script>
+<div class="bjui_wrap bjui-pageContent">
+	<div class="pt6">
+		<div class="col-md-3">
+			<div class="bjui_box bjui_mb6">
+				<hgroup>
+					<h6>个人用户信息</h6>
+					<a href="#" class="box-blue">修改密码</a>
+				</hgroup>
+				<section class="bjui-body">
+					<!-- 内容 -->
+					<div class="person_wrap h130">
+						<dl class="person_dl">
+							<dt>
+								<div class="head"><img src="images/h0001.png" width="60" height="60"></div>
+								<div class="name">海 淀</div>
+							</dt>
+							<dd>
+								<p>供热年度：2013-3014</p>
+								<p>所在部门：供暖燃气科</p>
+								<p>上级部门：区市政市容委</p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+			</div>
+			<div class="bjui_box bjui_mb6">
+				<hgroup>
+					<h6>热计量报警数据</h6>
+					<a href="#" class="box-blue">更多</a>
+				</hgroup>
+				<section class="bjui-body">
+					<!-- 内容 -->
+					<div class="person_wrap ptb5 h165">
+						<table class="bjui_box_table">
+							<thead>
+								<tr>
+									<td>采集点</td>
+									<td align="center">采集时间</td>
+									<td align="right">报警值</td>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>北京大学</td>
+									<td align="center">2015-10-10</td>
+									<td align="right"><span class="orange">100</span></td>
+								</tr>
+								<tr>
+									<td>北京大学</td>
+									<td align="center">2015-10-10</td>
+									<td align="right"><span class="orange">100</span></td>
+								</tr>
+								<tr>
+									<td>北京大学</td>
+									<td align="center">2015-10-10</td>
+									<td align="right"><span class="orange">100</span></td>
+								</tr>
+								<tr>
+									<td>北京大学</td>
+									<td align="center">2015-10-10</td>
+									<td align="right"><span class="orange">100</span></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</section>
+			</div>
+		</div>
+		<div class="col-md-6">
+			<div class="bjui_box bjui_mb6">
+				<hgroup>
+					<h6>GIS</h6>
+				</hgroup>
+				<section class="bjui-body">
+					<!-- 内容 -->
+					<div style="width:563px;height:340px;font-size:12px" id="map"></div>
+				</section>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="bjui_box bjui_mb6">
+				<hgroup>
+					<h6>今日供热实况</h6>
+				</hgroup>
+				<section class="bjui-body">
+					<!-- 内容 -->
+					<div class="person_wrap h340">
+						<div class="weather">
+							<img src="images/weather.png">
+						</div>
+						<table class="bjui_box_table mt20 hot_table">
+							<tbody>
+								<tr>
+									<td>热源数量</td>
+									<td align="right"><span class="orange">2</span></td>
+									<td>座</td>
+								</tr>
+								<tr>
+									<td>热力站数量</td>
+									<td align="right"><span class="orange">62</span></td>
+									<td>座</td>
+								</tr>
+								<tr>
+									<td>瞬时热量</td>
+									<td align="right"><span class="orange">1531.72</span></td>
+									<td>GJ/h</td>
+								</tr>
+								<tr>
+									<td>实际供热量</td>
+									<td align="right"><span class="orange">56184.49</span></td>
+									<td>GJ</td>
+								</tr>
+								<tr>
+									<td>累计热量</td>
+									<td align="right"><span class="orange">735.78</span></td>
+									<td>万GJ</td>
+								</tr>
+								<tr>
+									<td>实际单耗</td>
+									<td align="right"><span class="orange">4.94</span></td>
+									<td>MJ/m²</td>
+								</tr>
+								
+							</tbody>
+						</table>
+					</div>
+				</section>
+			</div>
+		</div>
+	</div>
+	<div class="">
+		<div class="col-md-3">
+			<div class="bjui_box bjui_mb6">
+				<hgroup>
+					<h6>工单管理</h6>
+					<a href="#" class="box-blue">更多</a>
+				</hgroup>
+				<section class="bjui-body">
+					<!-- 内容 -->
+					<div class="person_wrap ptb5 h196">
+						<table class="bjui_box_table">
+							<thead>
+								<tr>
+									<td>任务编号</td>
+									<td align="center">工单状态</td>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><a href="dialog.html" data-toggle="dialog" data-width="800" data-height="400" data-id="dialog">c12343000232</a></td>
+									<td align="center" style="color:red;">紧急</td>
+								</tr>
+								<tr>
+									<td><a href="dialog.html" data-toggle="dialog" data-width="800" data-height="400" data-id="dialog">c12343000232</a></td>
+									<td align="center" style="color:red;">紧急</td>
+								</tr>
+								<tr>
+									<td><a href="dialog.html" data-toggle="dialog" data-width="800" data-height="400" data-id="dialog">c12343000232</a></td>
+									<td align="center" style="color:red;">紧急</td>
+								</tr>
+								<tr>
+									<td><a href="dialog.html" data-toggle="dialog" data-width="800" data-height="400" data-id="dialog">c12343000232</a></td>
+									<td align="center">普通</td>
+								</tr>
+								<tr>
+									<td><a href="dialog.html" data-toggle="dialog" data-width="800" data-height="400" data-id="dialog">c12343000232</a></td>
+									<td align="center">普通</td>
+								</tr>
+								
+							</tbody>
+						</table>
+					</div>
+				</section>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="bjui_box bjui_mb6">
+				<hgroup>
+					<h6>通知公告</h6>
+					<a href="#" class="box-blue">更多</a>
+				</hgroup>
+				<section class="bjui-body">
+					<!-- 内容 -->
+					<div class="person_wrap ptb5 h196">
+						<table class="bjui_box_table">
+							<thead>
+								<tr>
+									<td>标题</td>
+									<td align="center">类型</td>
+									<td align="center">发布日期</td>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><a href="dialog2.html" data-toggle="dialog" data-width="800" data-height="400" data-id="dialog">关于系统的通知</a></td>
+									<td align="center">公告</td>
+									<td align="center">2015-10-10</td>
+								</tr>
+								<tr>
+									<td><a href="dialog2.html" data-toggle="dialog" data-width="800" data-height="400" data-id="dialog">关于系统的通知</a></td>
+									<td align="center">公告</td>
+									<td align="center">2015-10-10</td>
+								</tr>
+								<tr>
+									<td><a href="dialog2.html" data-toggle="dialog" data-width="800" data-height="400" data-id="dialog">关于系统的通知</a></td>
+									<td align="center">公告</td>
+									<td align="center">2015-10-10</td>
+								</tr>
+								<tr>
+									<td><a href="dialog2.html" data-toggle="dialog" data-width="800" data-height="400" data-id="dialog">关于系统的通知</a></td>
+									<td align="center">公告</td>
+									<td align="center">2015-10-10</td>
+								</tr>
+								<tr>
+									<td><a href="dialog2.html" data-toggle="dialog" data-width="800" data-height="400" data-id="dialog">关于系统的通知</a></td>
+									<td align="center">公告</td>
+									<td align="center">2015-10-10</td>
+								</tr>
+								
+								
+							</tbody>
+						</table>
+					</div>
+				</section>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="bjui_box bjui_mb6">
+				<hgroup>
+					<h6>舆情管理</h6>
+					<a href="#" class="box-blue">更多</a>
+				</hgroup>
+				<section class="bjui-body">
+					<!-- 内容 -->
+					<div class="person_wrap ptb5 h196">
+						<table class="bjui_box_table">
+							<thead>
+								<tr>
+									<td>标题</td>
+									<td align="center">类型</td>
+									<td align="center">入库时间</td>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><a href="#">舆情管理001</a></td>
+									<td align="center">正面</td>
+									<td align="center">2015-10-10</td>
+								</tr>
+								<tr>
+									<td><a href="#">舆情管理001</a></td>
+									<td align="center">正面</td>
+									<td align="center">2015-10-10</td>
+								</tr>
+								<tr>
+									<td><a href="#">舆情管理001</a></td>
+									<td align="center">正面</td>
+									<td align="center">2015-10-10</td>
+								</tr>
+								<tr>
+									<td><a href="#">舆情管理001</a></td>
+									<td align="center">正面</td>
+									<td align="center">2015-10-10</td>
+								</tr>
+								<tr>
+									<td><a href="#">舆情管理001</a></td>
+									<td align="center">正面</td>
+									<td align="center">2015-10-10</td>
+								</tr>
+								
+								
+							</tbody>
+						</table>
+					</div>
+				</section>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="bjui_box bjui_mb6">
+				<hgroup>
+					<h6>应急事故处置</h6>
+					<a href="#" class="box-blue">更多</a>
+				</hgroup>
+				<section class="bjui-body">
+					<!-- 内容 -->
+					<div class="person_wrap ptb5 h196">
+						<table class="bjui_box_table">
+							<thead>
+								<tr>
+									<td>标题</td>
+									<td align="center">事故日期</td>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><a href="#">c12343000232</a></td>
+									<td align="center">2015-10-10</td>
+								</tr>
+								<tr>
+									<td><a href="#">c12343000232</a></td>
+									<td align="center">2015-10-10</td>
+								</tr>
+								<tr>
+									<td><a href="#">c12343000232</a></td>
+									<td align="center">2015-10-10</td>
+								</tr>
+								<tr>
+									<td><a href="#">c12343000232</a></td>
+									<td align="center">2015-10-10</td>
+								</tr>
+								<tr>
+									<td><a href="#">c12343000232</a></td>
+									<td align="center">2015-10-10</td>
+								</tr>
+								
+							</tbody>
+						</table>
+					</div>
+				</section>
+			</div>
+		</div>
+	</div>
+</div>

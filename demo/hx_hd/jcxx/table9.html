@@ -1,0 +1,91 @@
+<div class="bjui-pageHeader">
+    <form id="pagerForm">
+        <!-- b-jui框架 -->
+        <input type="hidden" name="pageSize" value="${model.pageSize}">
+        <input type="hidden" name="pageCurrent" value="${model.pageCurrent}">
+        <input type="hidden" name="orderField" value="${param.orderField}">
+        <input type="hidden" name="orderDirection" value="${param.orderDirection}">
+
+        <!-- 搜索条 -->
+        <div class="bjui-searchBar">
+            <label>维修站名称：</label><input type="text" id="customNo" value="" name="code" class="form-control" size="10">&nbsp;
+            <label>维修站地址：</label><input type="text" value="" name="name" class="form-control" size="10">&nbsp;
+			   <label>负责人：</label><input type="text" value="" name="name" class="form-control" size="10">&nbsp;
+			      <label>班组：</label><input type="text" value="" name="name" class="form-control" size="10">&nbsp;
+            <button type="button" class="btn-default" data-icon="search">查询</button>&nbsp;
+            <a class="btn btn-default" href="javascript:;" data-toggle="reloadsearch" data-clear-query="true" data-icon="undo">清空查询</a>
+            <div class="pull-right">
+                <button type="button" class="btn-default" data-url="" data-toggle="navtab" >新增</button>&nbsp;
+                <button type="button" class="btn-default" data-url="" data-toggle="navtab" >修改</button>&nbsp;
+				<button type="button" class="btn-default" data-url="" data-toggle="navtab" >删除</button>&nbsp;
+				<button type="button" class="btn-default" data-url="" data-toggle="navtab" >审核</button>&nbsp;
+            </div>
+        </div>
+    </form>
+</div>
+<div class="bjui-pageContent" style="padding:6px;">
+    <table class="table table-bordered table-hover table-striped table-top" data-selected-multi="true" >
+        <thead>
+            <tr>
+			<th align="center"><input type="checkbox" class="checkboxCtrl" data-group="ids" data-toggle="icheck"></th>
+                <th align="center">维修站名称</th>
+                <th align="center">维修站地址</th>
+                <th align="center">负责人</th>
+                <th align="center">电话</th>
+                <th align="center">手机</th>
+                <th align="center">班组</th>
+                <th align="center">班组人员</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr data-id="1">
+			<td align="center"><input type="checkbox" name="ids" data-toggle="icheck" value="1"></td>
+                <td>1号维修站</td>
+                <td>北京市海淀区南路东街1号维修站</td>
+                <td>张三</td>
+                <td>010-88661111</td>
+                <td>13377889966</td>
+                <td>5号班组</td>
+                <td>人员1、人员2、人员3、人员4、人员5</td>
+            </tr>
+            <tr data-id="2">
+			 <td align="center"><input type="checkbox" name="ids" data-toggle="icheck" value="1"></td>
+                <td>2号维修站</td>
+                <td>北京市海淀区南路东街2号维修站</td>
+                <td>李四</td>
+                <td>010-88662222</td>
+                <td>15588775522</td>
+                <td>6号班组</td>
+                <td>人员6、人员7、人员8、人员9</td>
+            </tr>
+            <tr data-id="3">
+			<td align="center"><input type="checkbox" name="ids" data-toggle="icheck" value="1"></td>
+                <td>3号维修站</td>
+                <td>北京市海淀区南路东街3号维修站</td>
+                <td>王五</td>
+                <td>010-88663333</td>
+                <td>18866331199</td>
+                <td>7号班组</td>
+                <td>人员10、人员20、人员30、人员40、人员50、人员60、人员70、人员80</td>
+            </tr>
+            
+            
+        </tbody>
+    </table>
+</div>
+<div class="bjui-pageFooter">
+    <div class="pages">
+        <span>每页&nbsp;</span>
+        <div class="selectPagesize">
+            <select data-toggle="selectpicker" data-toggle-change="changepagesize">
+                <option value="30">30</option>
+                <option value="60">60</option>
+                <option value="120">120</option>
+                <option value="150">150</option>
+            </select>
+        </div>
+        <span>&nbsp;条，共 600 条</span>
+    </div>
+    <div class="pagination-box" data-toggle="pagination" data-total="600" data-page-size="30" data-page-current="1">
+    </div>
+</div>

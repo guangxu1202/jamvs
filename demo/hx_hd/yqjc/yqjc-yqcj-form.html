@@ -1,0 +1,65 @@
+<script type="text/javascript">
+
+function do_OK(json, $form) {
+    console.log(json)
+    console.log($form)
+}
+
+</script>
+
+<div class="bjui-pageContent" style="padding:6px;">
+    <form action="#" id="j_custom_form" data-toggle="validate" data-alertmsg="false">
+
+        <table class="table table-condensed table-bordered table-hover" width="100%" style="margin-top:10px;">
+            <tbody>
+                <tr>
+                    <td>
+                        <label class="control-label x85">名称：</label>
+                         <input type="text" value="" size="15">
+                    </td>
+					<td>
+                       <label class="control-label x85">网址：</label>
+                        <input type="text" value="" size="15">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label class="control-label x85">网址类别：</label>
+                      <select  data-toggle="selectpicker">
+                            <option value="">网址类别1</option>
+                            <option value="1">网址类别2</option>
+                            <option value="2">网址类别3</option>
+                        </select>
+                    </td>
+                    <td>
+					<label class="control-label x85">状态：</label>
+                      <select  data-toggle="selectpicker">
+                            <option value="">状态1</option>
+                            <option value="1">状态2</option>
+                            <option value="2">状态3</option>
+                        </select>
+                    </td>
+                   
+                </tr>
+                 <tr>
+                    <td >
+                        <label class="control-label x85">修改时间：</label>
+                      <input type="text" value="" size="15">
+                    </td>
+					<td >
+                       
+                    </td>
+                </tr>
+                
+                
+                
+            </tbody>
+        </table>
+    </form>
+</div>
+<div class="bjui-pageFooter">
+    <ul>
+        <li><button type="button" class="btn-default" data-icon="close">取消</button></li>
+        <li><button type="submit" class="btn-default" data-icon="save">保存</button></li>
+    </ul>
+</div>

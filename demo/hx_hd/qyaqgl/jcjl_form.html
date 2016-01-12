@@ -1,0 +1,74 @@
+﻿<script type="text/javascript">
+
+function do_OK(json, $form) {
+    console.log(json)
+    console.log($form)
+}
+
+</script>
+
+<div class="bjui-pageContent" style="padding:6px;">
+    <form action="ajaxDone2.html" id="j_custom_form" data-toggle="validate" data-alertmsg="false">
+
+        <table class="table table-condensed table-bordered table-hover" width="100%" style="margin-top:10px;">
+            <tbody>
+
+                <tr>
+                    <td>
+                        <label class="control-label x85">工程名称：</label>
+                        <input type="text" value="" size="15">
+                    </td>
+                    <td>
+                        <label class="control-label x85">建设单位：</label>
+                        <input type="text" value="" size="15">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label class="control-label x85">检查单位：</label>
+                        <input type="text" value="" size="15">
+                    </td>
+                    <td>
+                        <label class="control-label x85">检查部位：</label>
+                        <input type="text" value="" size="15">
+                    </td>
+                   
+                </tr>
+                 <tr>
+                    <td>
+                        <label class="control-label x85">联系电话：</label>
+                        <input type="text" value="" size="15">
+                    </td>
+                    <td>
+                        <label class="control-label x85">检查单位意见：</label>
+                        <input type="text" value="" size="30">
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td colspan="3">
+                        <label for="j_custom_content" class="control-label x85">检查内容记录：</label>
+                        <div style="display: inline-block; vertical-align: middle;">
+                            <textarea name="content" id="j_form_content" class="j-content" style="width: 700px;" data-toggle="kindeditor" data-minheight="200">
+                                <p><strong>HTML编辑器KindEditor：</strong></p>
+                                <p><strong>已优化：</strong></p>
+                                <ul>
+                                    <li>深度清理html标记</li>
+                                    <li>上传附件后，自动获取文件名（需要返回JSON属性"origin_name"）</li>
+                                    <li>修改一键排版为段落前空两个全角空格，主要考虑到某些行需要顶格时直接删除空格即可。</li>
+                                </ul>
+                                <p><br>更多参数请参见：<a href="http://kindeditor.net/" target="_blank">http://kindeditor.net/</a></p>
+                            </textarea>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</div>
+<div class="bjui-pageFooter">
+    <ul>
+        <li><button type="button" class="btn-default" data-icon="close">取消</button></li>
+        <li><button type="submit" class="btn-default" data-icon="save">保存</button></li>
+    </ul>
+</div>

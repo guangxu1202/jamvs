@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>欢迎登录...</title>
+<link href="css/login.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" src="js/jquery-1.7.2.min.js"></script>
+<script src="js/cloud.js" type="text/javascript"></script>
+
+<script language="javascript">
+$(function(){
+    $('.loginbox').css({'position':'absolute','left':($(window).width()-692)/2});
+	$(window).resize(function(){  
+    $('.loginbox').css({'position':'absolute','left':($(window).width()-692)/2});
+    })  
+});
+
+function loginChk() {
+	if(loginForm.loginUser.value=="grb"&&loginForm.loginPwd.value=="grb") {
+		location.href="index.html";
+	}else if(loginForm.loginUser.value=="qy"&&loginForm.loginPwd.value=="qy") {
+		location.href="indexe.html";
+	}else {
+		alert("用户名或密码错误！");
+	}
+}
+</script> 
+
+</head>
+
+<body class="login_body">
+
+<!-- cloud -->
+<div id="mainBody">
+    <div id="cloud1" class="cloud"></div>
+    <div id="cloud2" class="cloud"></div>
+</div>  
+<!-- header -->
+<header class="logintop">    
+    <span>欢迎登录海淀区供热服务管理平台</span>    
+    <ul>
+        <li><a href="#"></a></li>
+    </ul>    
+</header>
+<div class="loginbody">
+    <span class="systemlogo"></span> 
+    <div class="loginbox">
+        <form name="loginForm">
+            <ul>
+                <li><input type="text" name="loginUser" class="loginuser" placeholder="请输入用户名"/></li>
+                <li><input type="password" name="loginPwd" class="loginpwd" placeholder="请输入密码"/></li>
+                <li>
+					<input type="button" class="loginbtn" value="登录" onclick="loginChk()"/>
+                    <label class="lab"><input name="" type="checkbox" value="" checked="checked" />记住密码</label>
+                </li>
+            </ul>
+        </form>
+    </div>
+</div>
+
+<footer class="loginbm">Copyright &copy; 2015</footer>
+	
+    
+</body>
+
+</html>

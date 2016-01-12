@@ -1,0 +1,107 @@
+<div class="bjui-pageHeader">
+    <form id="pagerForm" data-toggle="ajaxsearch" action="table.html" method="post">
+        <!-- b-jui框架 -->
+        <input type="hidden" name="pageSize" value="${model.pageSize}">
+        <input type="hidden" name="pageCurrent" value="${model.pageCurrent}">
+        <input type="hidden" name="orderField" value="${param.orderField}">
+        <input type="hidden" name="orderDirection" value="${param.orderDirection}">
+
+        <!-- 搜索条 -->
+        <div class="bjui-searchBar">
+            <!--<label>处理状态:</label>
+            <select name="type" data-toggle="selectpicker">
+                <option value="">全部</option>
+                <option value="1">等待接收</option>
+                <option value="2">处理中</option>
+                <option value="3">超时未处理</option>
+            </select>&nbsp;-->
+            <label>结构名称：</label>
+			<select name="type" data-toggle="selectpicker">
+                <option value="">全部</option>
+                <option value="1">海淀区结构名称一</option>
+                <option value="2">海淀区结构名称二</option>
+                <option value="3">海淀区结构名称三</option>
+            </select>&nbsp;
+            <!--<input type="checkbox" id="j_table_chk" value="true" data-toggle="icheck" data-label="我的客户">
+            <button type="button" class="showMoreSearch" data-toggle="moresearch" data-name="custom"><i class="fa fa-angle-double-down"></i></button>-->
+            <button type="submit" class="btn-default" data-icon="search">查询</button>&nbsp;
+
+            <a class="btn btn-default" href="javascript:;" data-toggle="reloadsearch" data-clear-query="true" data-icon="undo">清空查询</a>
+			 <div class="pull-right">
+                <button type="button" class="btn-default" data-url="" data-toggle="navtab" >导出</button>&nbsp;
+                
+            </div>
+        </div>
+        <!-- 更多查询项 -->
+        <div class="bjui-moreSearch">
+            <label>职业：</label><input type="text" value="" name="profession" size="15" />
+            <label>&nbsp;性别:</label>
+            <select name="sex" data-toggle="selectpicker">
+                <option value="">全部</option>
+                <option value="true">男</option>
+                <option value="false">女</option>
+            </select>
+            <label>&nbsp;手机:</label>
+            <input type="text" value="" name="mobile" size="10">
+            <label>职业：</label><input type="text" value="" name="profession" size="15" />
+            <label>&nbsp;性别:</label>
+            <select name="sex" data-toggle="selectpicker">
+                <option value="">全部</option>
+                <option value="true">男</option>
+                <option value="false">女</option>
+            </select>
+            <label>&nbsp;手机:</label>
+            <input type="text" value="" name="mobile" size="10">
+
+        </div>
+
+    </form>
+</div>
+<div class="bjui-pageContent" style="padding:6px;">
+    <table class="table table-bordered table-hover table-striped table-top" data-selected-multi="true" >
+        <thead>
+            <tr>
+                <th align="center">机构</th>
+                <th align="center">总计</th>
+                <th align="center">表扬</th>
+                <th align="center">不热</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr data-id="1" align="center">
+                <td>海淀区结构名称一</td>
+                <td>248</td>
+                <td>120</td>
+                <td>50</td>
+            </tr>
+			<tr data-id="2" align="center">
+                <td>海淀区结构名称二</td>
+                <td>99</td>
+                <td>56</td>
+                <td>10</td>
+            </tr>
+		    <tr data-id="3" align="center">
+                <td>海淀区结构名称三</td>
+                <td>123</td>
+                <td>88</td>
+                <td>12</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="bjui-pageFooter">
+    <div class="pages">
+        <span>每页&nbsp;</span>
+        <div class="selectPagesize">
+            <select data-toggle="selectpicker" data-toggle-change="changepagesize">
+                <option value="30">30</option>
+                <option value="60">60</option>
+                <option value="120">120</option>
+                <option value="150">150</option>
+            </select>
+        </div>
+        <span>&nbsp;条，共 600 条</span>
+    </div>
+    <div class="pagination-box" data-toggle="pagination" data-total="600" data-page-size="30" data-page-current="1">
+    </div>
+</div>

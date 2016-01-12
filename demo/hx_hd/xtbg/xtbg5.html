@@ -1,0 +1,75 @@
+<div class="bjui-pageHeader">
+    <form id="pagerForm" data-toggle="ajaxsearch" action="" method="post">
+        <!-- b-jui框架 -->
+        <input type="hidden" name="pageSize" value="${model.pageSize}">
+        <input type="hidden" name="pageCurrent" value="${model.pageCurrent}">
+        <input type="hidden" name="orderField" value="${param.orderField}">
+        <input type="hidden" name="orderDirection" value="${param.orderDirection}">
+
+        <!-- 搜索条 -->
+        <div class="bjui-searchBar">
+            <label>发文字号：</label><input type="text" id="customNo" value="" name="code" class="form-control" size="10">&nbsp;
+            <label>公文正文：</label><input type="text" value="" name="name" class="form-control" size="8">&nbsp;
+            <button type="button" class="btn-default" data-icon="search">查询</button>&nbsp;
+
+            <a class="btn btn-default" href="javascript:;" data-toggle="reloadsearch" data-clear-query="true" data-icon="undo">清空查询</a>
+            <div class="pull-right">
+                <button type="button" class="btn-default" data-url="" data-toggle="navtab" >新增</button>&nbsp;
+                <button type="button" class="btn-default" data-url="" data-toggle="navtab" >修改</button>&nbsp;
+				<button type="button" class="btn-default" data-url="" data-toggle="navtab" >删除</button>&nbsp;
+				<button type="button" class="btn-default" data-url="" data-toggle="navtab" >打印</button>&nbsp;
+				<button type="button" class="btn-default" data-url="" data-toggle="navtab" >发送</button>&nbsp;
+				<button type="button" class="btn-default" data-url="" data-toggle="navtab" >查看发文记录</button>&nbsp;
+				<button type="button" class="btn-default" data-url="" data-toggle="navtab" >接收</button>&nbsp;
+            </div>
+        </div>
+
+    </form>
+</div>
+<div class="bjui-pageContent" style="padding:6px;">
+    <table class="table table-bordered table-hover table-striped table-top" data-selected-multi="true" >
+        <thead>
+            <tr>
+				<th align="center"><input type="checkbox" class="checkboxCtrl" data-group="ids" data-toggle="icheck"></th>
+                <th align="">主题</th>
+                <th align="">发文字号</th>
+                <th align="">拟稿日期</th>
+                <th align="">当前状态</th>
+                <th align="">正在进行流程</th>
+                <th align="">公文正文</th>
+                <th align="">分发人</th>
+				<th align="">附件</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr data-id="1">
+				<td align="center"><input type="checkbox" name="ids" data-toggle="icheck" value="1"></td>
+                <td>关于2014-2015供热期评优的通知</td>
+                <td>海淀XX字XXX号</td>
+                <td>2015-03-30</td>
+                <td>待审</td>
+                <td>内部审议</td>
+                <td>详见附件</td>
+                <td>办公室</td>
+				<td>(无)</td>
+            </tr>
+            
+        </tbody>
+    </table>
+</div>
+<div class="bjui-pageFooter">
+    <div class="pages">
+        <span>每页&nbsp;</span>
+        <div class="selectPagesize">
+            <select data-toggle="selectpicker" data-toggle-change="changepagesize">
+                <option value="30">30</option>
+                <option value="60">60</option>
+                <option value="120">120</option>
+                <option value="150">150</option>
+            </select>
+        </div>
+        <span>&nbsp;条，共 600 条</span>
+    </div>
+    <div class="pagination-box" data-toggle="pagination" data-total="600" data-page-size="30" data-page-current="1">
+    </div>
+</div>

@@ -1,0 +1,109 @@
+﻿<div class="bjui-pageHeader">
+    <form id="pagerForm" data-toggle="ajaxsearch" action="" method="post">
+        <!-- b-jui框架 -->
+        <input type="hidden" name="pageSize" value="${model.pageSize}">
+        <input type="hidden" name="pageCurrent" value="${model.pageCurrent}">
+        <input type="hidden" name="orderField" value="${param.orderField}">
+        <input type="hidden" name="orderDirection" value="${param.orderDirection}">
+
+        <!-- 搜索条 -->
+        <div class="bjui-searchBar">
+            <label>所属业务:</label>
+            <select name="type" data-toggle="selectpicker">
+                <option value="">全部</option>
+                <option value="1">联络</option>
+                <option value="2">住宿</option>
+                <option value="3">餐饮</option>
+                <option value="4">交通</option>
+            </select>&nbsp;
+            <label>工程名称：</label><input type="text" id="customNo" value="" name="code" class="form-control" size="10">&nbsp;
+            <label>建设单位：</label><input type="text" value="" name="name" class="form-control" size="8">
+            <button type="button" class="showMoreSearch" data-toggle="moresearch" data-name="custom"><i class="fa fa-angle-double-down"></i></button>
+            <button type="button" class="btn-default" data-icon="search">查询</button>&nbsp;
+
+            <a class="btn btn-default" href="javascript:;" data-toggle="reloadsearch" data-clear-query="true" data-icon="undo">清空查询</a>
+            <div class="pull-right">
+                <button type="button" class="btn-default" data-url="" data-toggle="navtab" >新增</button>&nbsp;
+                <button type="button" class="btn-default" data-url="" data-toggle="navtab" >修改</button>&nbsp;
+				<button type="button" class="btn-default" data-url="" data-toggle="navtab" >删除</button>&nbsp;
+            </div>
+        </div>
+        <!-- 更多查询项 -->
+        <div class="bjui-moreSearch">
+            <label>检查单位：</label><input type="text" value="" name="profession" size="15" />
+            <label>检查部位:</label>
+            <input type="text" value="" name="mobile" size="10">
+        </div>
+    </form>
+</div>
+<div class="bjui-pageContent" style="padding:6px;">
+    <table class="table table-bordered table-hover table-striped table-top" data-selected-multi="true" >
+        <thead>
+            <tr>
+                <th align="center"><input type="checkbox" class="checkboxCtrl" data-group="ids" data-toggle="icheck"></th>
+				<th align="center">指导思想</th>
+                <th align="center">编制依据</th>
+                <th align="center">事故类型和危险程度分析</th>
+                <th align="center">组织机构及职责</th>
+                <th align="center">预防与预警</th>
+                <th align="center">信息报告程序</th>
+		<th align="center">应急响应</th>
+		<th align="center">应急物资与装备保障</th>
+		<th align="center">后期处理</th>
+		<th align="center">保障措施</th>
+		<th align="center">培训与演练</th>
+		<th align="center">附则</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr data-id="1">
+                <td align="center"><input type="checkbox" name="ids" data-toggle="icheck" value="1"></td>
+				<td>三个代表</td>
+                <td>编制依据</td>
+                <td>极度安逸</td>
+                <td>保安队巡逻</td>
+                <td>无</td>
+                <td>程序</td>
+		<td>无响应</td>
+		<td>无保障</td>
+		<td>无处理</td>
+		<td>无措施</td>
+		<td>无学习</td>
+		<td>无附件</td>
+            </tr>
+            <tr data-id="2">
+                <td align="center"><input type="checkbox" name="ids" data-toggle="icheck" value="1"></td>
+				<td>八荣八耻</td>
+                <td>编制依据</td>
+                <td>极度安逸</td>
+                <td>保安队巡逻</td>
+                <td>无</td>
+                <td>程序</td>
+		<td>无响应</td>
+		<td>无保障</td>
+		<td>无处理</td>
+		<td>无措施</td>
+		<td>无学习</td>
+		<td>无附件</td>
+            </tr>
+            
+            
+        </tbody>
+    </table>
+</div>
+<div class="bjui-pageFooter">
+    <div class="pages">
+        <span>每页&nbsp;</span>
+        <div class="selectPagesize">
+            <select data-toggle="selectpicker" data-toggle-change="changepagesize">
+                <option value="30">30</option>
+                <option value="60">60</option>
+                <option value="120">120</option>
+                <option value="150">150</option>
+            </select>
+        </div>
+        <span>&nbsp;条，共 600 条</span>
+    </div>
+    <div class="pagination-box" data-toggle="pagination" data-total="600" data-page-size="30" data-page-current="1">
+    </div>
+</div>

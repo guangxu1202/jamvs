@@ -1,0 +1,46 @@
+﻿<script type="text/javascript">
+
+function do_OK(json, $form) {
+    console.log(json)
+    console.log($form)
+}
+
+</script>
+
+<div class="bjui-pageContent" style="padding:6px;">
+    <form action="ajaxDone2.html" id="j_custom_form" data-toggle="validate" data-alertmsg="false">
+
+        <table class="table table-condensed table-bordered table-hover" width="100%" style="margin-top:10px;">
+            <tbody>
+
+                <tr>
+                    <td>
+                        <label class="control-label x85">姓名：</label>
+                        <input type="text" value="" size="15">
+                    </td>
+                    <td>
+                        <label class="control-label x85">职务：</label>
+                        <input type="text" value="" size="15">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label class="control-label x85">专家类型：</label>
+                        <input type="text" value="" size="15">
+                    </td>
+                    <td>
+                        <label class="control-label x85">联系方式：</label>
+                        <input type="text" value="" size="15">
+                    </td>
+                   
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</div>
+<div class="bjui-pageFooter">
+    <ul>
+        <li><button type="button" class="btn-default" data-icon="close">取消</button></li>
+        <li><button type="submit" class="btn-default" data-icon="save">保存</button></li>
+    </ul>
+</div>

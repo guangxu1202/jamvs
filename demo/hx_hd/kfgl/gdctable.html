@@ -1,0 +1,141 @@
+<div class="bjui-pageHeader">
+    <form id="pagerForm" data-toggle="ajaxsearch" action="table.html" method="post">
+        <!-- b-jui框架 -->
+        <input type="hidden" name="pageSize" value="${model.pageSize}">
+        <input type="hidden" name="pageCurrent" value="${model.pageCurrent}">
+        <input type="hidden" name="orderField" value="${param.orderField}">
+        <input type="hidden" name="orderDirection" value="${param.orderDirection}">
+
+        <!-- 搜索条 -->
+        <div class="bjui-searchBar">
+            <label>小区名称:</label>
+            <select name="type" data-toggle="selectpicker">
+                <option value="">全部</option>
+                <option value="1">八里庄街道</option>
+                <option value="2">紫竹院街道</option>
+                <option value="3">北下关街道</option>
+                <option value="4">北太平庄街道</option>
+            </select>&nbsp;
+            <label>用户编码：</label><input type="text" id="customNo" value="" name="code" class="form-control" size="10">&nbsp;
+            <label>用户姓名：</label><input type="text" value="" name="name" class="form-control" size="8">&nbsp;
+            <!--<input type="checkbox" id="j_table_chk" value="true" data-toggle="icheck" data-label="我的客户">
+            <button type="button" class="showMoreSearch" data-toggle="moresearch" data-name="custom"><i class="fa fa-angle-double-down"></i></button>-->
+            <button type="submit" class="btn-default" data-icon="search">查询</button>&nbsp;
+
+            <a class="btn btn-default" href="javascript:;" data-toggle="reloadsearch" data-clear-query="true" data-icon="undo">清空查询</a>
+            <div class="pull-right">
+                <button type="button" class="btn-default" data-url="form.html" data-toggle="navtab" >新增</button>&nbsp;
+                
+            </div>
+        </div>
+        <!-- 更多查询项 -->
+        <div class="bjui-moreSearch">
+            <label>职业：</label><input type="text" value="" name="profession" size="15" />
+            <label>&nbsp;性别:</label>
+            <select name="sex" data-toggle="selectpicker">
+                <option value="">全部</option>
+                <option value="true">男</option>
+                <option value="false">女</option>
+            </select>
+            <label>&nbsp;手机:</label>
+            <input type="text" value="" name="mobile" size="10">
+            <label>职业：</label><input type="text" value="" name="profession" size="15" />
+            <label>&nbsp;性别:</label>
+            <select name="sex" data-toggle="selectpicker">
+                <option value="">全部</option>
+                <option value="true">男</option>
+                <option value="false">女</option>
+            </select>
+            <label>&nbsp;手机:</label>
+            <input type="text" value="" name="mobile" size="10">
+
+        </div>
+
+    </form>
+</div>
+<div class="bjui-pageContent" style="padding:6px;">
+    <table class="table table-bordered table-hover table-striped table-top" data-selected-multi="true" >
+        <thead>
+            <tr>
+                <th align="center">任务编号</th>
+                <th align="center">用户编码</th>
+                <th align="center">用户姓名</th>
+                <th align="center">联系人</th>
+                <th align="center">联系电话</th>
+                <th align="center">联系地址</th>
+				<th align="center">任务等级</th>
+                <th align="center">处理结果</th>
+                <!--<th align="center"><input type="checkbox" class="checkboxCtrl" data-group="ids" data-toggle="icheck"></th>-->
+                <th align="center">操作</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr data-id="1" align="center">
+                <td>0000011</td>
+                <td>chenji001</td>
+                <td>chenji</td>
+                <td>陈吉</td>
+                <td>13412345678</td>
+                <td>海淀街道</td>
+				<td>一级</td>
+                <td>未处理</td>
+                <!--<td align="center"><input type="checkbox" name="ids" data-toggle="icheck" value="1"></td>-->
+                <td align="center">
+                    <!--<a href="form.html?id=1" class="btn btn-blue" data-toggle="navtab" data-id="form">新建</a>-->
+                    <a href="form.html?id=1" class="btn btn-blue" data-toggle="navtab" data-id="form">编辑</a>
+                    <!--<a href="ajaxDone2.html" class="btn btn-blue" data-toggle="doajax" data-confirm-msg="确定要删除该行信息吗？">删除</a>-->
+                </td>
+            </tr>
+            <tr data-id="2" align="center">
+                <td>0000012</td>
+                <td>zhanghai002</td>
+                <td>zhanghai</td>
+                <td>张海</td>
+                <td>13814567892</td>
+                <td>中关村街道</td>
+				<td>二级</td>
+                <td>待处理</td>
+                <!--<td align="center"><input type="checkbox" name="ids" data-toggle="icheck" value="1"></td>-->
+                <td align="center">
+                    <!--<a href="form.html?id=1" class="btn btn-blue" data-toggle="navtab" data-id="form">新建</a>-->
+                    <a href="form.html?id=1" class="btn btn-blue" data-toggle="navtab" data-id="form">编辑</a>
+                    <!--<a href="ajaxDone2.html" class="btn btn-blue" data-toggle="doajax" data-confirm-msg="确定要删除该行信息吗？">删除</a>-->
+                </td>
+            </tr>
+            <tr data-id="3" align="center">
+                <td>0000013</td>
+                <td>suntian003</td>
+                <td>suntian</td>
+                <td>孙天</td>
+                <td>18918789065</td>
+                <td>学院路街道</td>
+				<td>三级</td>
+                <td>已处理</td>
+               <!--<td align="center"><input type="checkbox" name="ids" data-toggle="icheck" value="1"></td>-->
+                <td align="center">
+                    <!--<a href="form.html?id=1" class="btn btn-blue" data-toggle="navtab" data-id="form">新建</a>-->
+                    <a href="form.html?id=1" class="btn btn-blue" data-toggle="navtab" data-id="form">编辑</a>
+                    <!--<a href="ajaxDone2.html" class="btn btn-blue" data-toggle="doajax" data-confirm-msg="确定要删除该行信息吗？">删除</a>-->
+                </td>
+            </tr>
+            
+            
+        </tbody>
+    </table>
+</div>
+<div class="bjui-pageFooter">
+    <div class="pages">
+        <span>每页&nbsp;</span>
+        <div class="selectPagesize">
+            <select data-toggle="selectpicker" data-toggle-change="changepagesize">
+                <option value="30">30</option>
+                <option value="60">60</option>
+                <option value="120">120</option>
+                <option value="150">150</option>
+            </select>
+        </div>
+        <span>&nbsp;条，共 600 条</span>
+    </div>
+    <div class="pagination-box" data-toggle="pagination" data-total="600" data-page-size="30" data-page-current="1">
+    </div>
+</div>

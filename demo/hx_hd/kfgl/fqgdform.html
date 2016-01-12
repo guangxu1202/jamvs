@@ -1,0 +1,194 @@
+<script type="text/javascript">
+
+function do_OK(json, $form) {
+    console.log(json)
+    console.log($form)
+}
+
+</script>
+
+<div class="bjui-pageContent" style="padding:6px;">
+    <form action="ajaxDone2.html" id="j_custom_form" data-toggle="validate" data-alertmsg="false">
+
+        <table class="table table-condensed table-bordered table-hover" width="100%" style="margin-top:10px;">
+            <tbody>
+
+                <tr>
+                    <td>
+                        <label class="control-label x85">任务编号：</label>
+                        <input type="text" value="" size="15">
+                    </td>
+                    <td>
+                        <label class="control-label x85">来电号码：</label>
+                        <input type="text" value="" size="15">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label class="control-label x85">用户编码：</label>
+                        <input type="text" value="" size="15">
+                    </td>
+                    <td>
+                        <label class="control-label x85">用户姓名：</label>
+                        <input type="text" value="" size="15">
+                    </td>
+                   
+                </tr>
+                 <tr>
+                    <td>
+                        <label class="control-label x85">参考方案：</label>
+                        <input type="text" value="" size="15">
+                    </td>
+                    <td>
+                        <label class="control-label x85">联系人：</label>
+                        <input type="text" value="" size="15">
+                    </td>
+                   
+                </tr>
+				 <tr>
+                    <td>
+                        <label class="control-label x85">联系电话：</label>
+                        <input type="text" value="" size="15">
+                    </td>
+                    <td>
+                        <label class="control-label x85">热力站：</label>
+                        <input type="text" value="" size="15">
+                    </td>
+                   
+                </tr>
+				 <tr>
+                    <td>
+                        <label class="control-label x85">楼号：</label>
+                        <input type="text" value="" size="15">
+                    </td>
+                    <td>
+                        <label class="control-label x85">联系地址：</label>
+                        <input type="text" value="" size="15">
+                    </td>
+                   
+                </tr>
+				 <tr>
+                    <td>
+                        <label class="control-label x85">其他电话：</label>
+                        <input type="text" value="" size="15">
+                    </td>
+                    <td>                      
+						<label class="control-label x85">任务来源：</label>
+                        <input type="text" value="" size="15">
+                    </td>
+                   
+                </tr>
+				 <tr>
+                    <td>
+					   <label class="control-label x85">处理结果：</label>
+                       <input type="text" value="" size="15">
+                    </td>
+                    <td>
+                        <label class="control-label x85">业务描述：</label>
+                        <input type="text" value="" size="15">
+                    </td>
+                   
+                </tr>
+				<tr>
+                    <td>
+						<label class="control-label x85">小区名：</label>
+                         <select name="type" data-toggle="selectpicker">
+							<option value="">全部</option>
+							<option value="1">八里庄街道</option>
+							<option value="2">紫竹院街道</option>
+							<option value="3">北下关街道</option>
+							<option value="4">北太平庄街道</option>
+						</select>
+                    </td>
+                    <td>
+						<label class="control-label x85">保修类型：</label>
+                        <select  data-toggle="selectpicker">
+                            <option value="">全部</option>
+                            <option value="1">类型1</option>
+                            <option value="2">类型2</option>
+                        </select>
+                        
+                    </td>
+                   
+                </tr>
+				<tr>
+                    <td>
+                        <label class="control-label x85">任务等级：</label>
+                        <select  data-toggle="selectpicker">
+                            <option value="">全部</option>
+                            <option value="1">一级</option>
+                            <option value="2">二级</option>
+							<option value="3">三级</option>
+                        </select>
+                    </td>
+                    <td>
+						 <label class="control-label x85">任务类型：</label>
+                        <select  data-toggle="selectpicker">
+                            <option value="">全部</option>
+                            <option value="1">类型1</option>
+                            <option value="2">类型2</option>
+							<option value="3">类型3</option>
+                        </select>
+                        
+                    </td>
+                   
+                </tr>
+				<tr>
+                    <td>
+                        <label class="control-label x85">是否派单：</label>
+                        <select  data-toggle="selectpicker">
+                            <option value="">全部</option>
+                            <option value="1">是</option>
+                            <option value="2">否</option>
+                        </select>
+                    </td>
+                    <td>
+                        <label class="control-label x85">是否审核：</label>
+                        <select  data-toggle="selectpicker">
+                            <option value="">全部</option>
+                            <option value="1">是</option>
+                            <option value="2">否</option>
+                        </select>
+                    </td>
+                   
+                </tr>
+                 <tr>
+                    <td>
+                        <label class="control-label x85">数据来源：</label>
+                        <select  data-toggle="selectpicker">
+                            <option value="">全部</option>
+                            <option value="1">来源1</option>
+                            <option value="2">来源2</option>
+                        </select>
+                    </td>
+                    <td>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td colspan="3">
+                        <label for="j_custom_content" class="control-label x85">备注：</label>
+                        <div style="display: inline-block; vertical-align: middle;">
+                            <textarea name="content" id="j_form_content" class="j-content" style="width: 700px;" data-toggle="kindeditor" data-minheight="200">
+                                <p><strong>HTML编辑器KindEditor：</strong></p>
+                                <p><strong>已优化：</strong></p>
+                                <ul>
+                                    <li>深度清理html标记</li>
+                                    <li>上传附件后，自动获取文件名（需要返回JSON属性"origin_name"）</li>
+                                    <li>修改一键排版为段落前空两个全角空格，主要考虑到某些行需要顶格时直接删除空格即可。</li>
+                                </ul>
+                                <p><br>更多参数请参见：<a href="http://kindeditor.net/" target="_blank">http://kindeditor.net/</a></p>
+                            </textarea>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</div>
+<div class="bjui-pageFooter">
+    <ul>
+        <li><button type="button" class="btn-default" data-icon="close">取消</button></li>
+        <li><button type="submit" class="btn-default" data-icon="save">保存</button></li>
+    </ul>
+</div>
